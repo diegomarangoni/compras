@@ -72,8 +72,16 @@ body.travado { position: fixed; left: 0; right: 0; overflow: hidden; }
 .painel.arrastando, .fundo.arrastando { transition: none; }
 .painel .topo { padding: 10px 16px 12px; border-bottom: 1px solid var(--line); position: relative; }
 .painel .alca { width: 40px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 10px; }
-.painel h3 { margin: 0; font-size: 22px; padding-right: 40px; }
+.painel h3 { margin: 0; font-size: 22px; padding-right: 84px; }
 .painel .sub { color: var(--muted); }
+.compartilhar { position: absolute; right: 52px; top: 18px; width: 32px; height: 32px; border-radius: 50%; border: 0; background: var(--line); color: var(--text); padding: 0; display: flex; align-items: center; justify-content: center; }
+.compartilhar svg { width: 17px; height: 17px; }
+/* Tudo que reage a clique mostra a mãozinha (no iPhone não faz diferença). */
+.compartilhar, .fechar, .rodape button { cursor: pointer; }
+.produto img, .foto-grande { cursor: zoom-in; }
+.ampliada { cursor: zoom-out; }
+.aviso { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom) + 24px); transform: translateX(-50%); background: var(--text); color: var(--bg); padding: 8px 14px; border-radius: 18px; font-size: 14px; opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 20; }
+.aviso.visivel { opacity: 1; }
 .fechar { position: absolute; right: 12px; top: 18px; width: 32px; height: 32px; border-radius: 50%; border: 0; background: var(--line); color: var(--text); font-size: 18px; line-height: 32px; padding: 0; }
 .painel .corpo { overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; flex: 1 1 auto; min-height: 0; padding: 12px 16px 20px; }
 .painel .topo { touch-action: none; }
@@ -110,11 +118,13 @@ body.travado { position: fixed; left: 0; right: 0; overflow: hidden; }
     <div class="alca"></div>
     <h3 id="p-titulo"></h3>
     <div class="sub" id="p-sub"></div>
+    <button class="compartilhar" id="compartilhar" type="button" aria-label="Compartilhar link do produto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M8 7l4-4 4 4"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg></button>
     <button class="fechar" id="fechar" type="button" aria-label="Fechar">✕</button>
   </div>
   <div class="corpo" id="p-corpo"></div>
 </div>
 <div class="ampliada" id="ampliada"><img alt=""></div>
+<div class="aviso" id="aviso" role="status"></div>
 
 <script>
 "use strict";
@@ -180,7 +190,14 @@ function img(src, cls) {
   return i;
 }
 
-function abrir(i) {
+// Deeplink: cada item tem um endereço próprio, "#<slug>" (ex.: "#linguica-fresca").
+// Abrir um item muda o endereço (dá para compartilhar); fechar volta ao endereço da lista.
+let aberto = null;
+const porSlug = new Map();
+
+function abrir(i, { historico = true } = {}) {
+  aberto = i;
+  if (historico && location.hash !== "#" + i.slug) history.pushState({ painel: i.slug }, "", "#" + i.slug);
   document.getElementById("p-titulo").textContent = i.de;
   document.getElementById("p-sub").textContent = [i.pt, i.qtd].filter(Boolean).join(" · ");
   const corpo = document.getElementById("p-corpo");
@@ -201,7 +218,12 @@ function abrir(i) {
   document.getElementById("fundo").classList.add("aberto");
   document.getElementById("painel").classList.add("aberto");
 }
-function fechar() {
+function fechar({ historico = true } = {}) {
+  aberto = null;
+  if (historico && location.hash) {
+    if (history.state && history.state.painel) history.back();
+    else history.replaceState(null, "", location.pathname + location.search);
+  }
   const p = document.getElementById("painel"), f = document.getElementById("fundo");
   p.classList.remove("arrastando"); f.classList.remove("arrastando");
   p.style.transform = ""; f.style.opacity = "";
@@ -231,8 +253,34 @@ function ampliar(src) {
   a.classList.add("aberto");
 }
 
-document.getElementById("fundo").addEventListener("click", fechar);
-document.getElementById("fechar").addEventListener("click", fechar);
+function aplicarEndereco() {
+  const i = porSlug.get(decodeURIComponent(location.hash.slice(1)));
+  if (i) { if (aberto !== i) abrir(i, { historico: false }); }
+  else {
+    if (aberto) fechar({ historico: false });
+    if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+  }
+}
+window.addEventListener("popstate", aplicarEndereco);
+
+let avisoTimer = null;
+function avisar(texto) {
+  const a = document.getElementById("aviso");
+  a.textContent = texto; a.classList.add("visivel");
+  clearTimeout(avisoTimer); avisoTimer = setTimeout(() => a.classList.remove("visivel"), 1800);
+}
+document.getElementById("compartilhar").addEventListener("click", async () => {
+  if (!aberto) return;
+  const url = location.origin + location.pathname + "#" + aberto.slug;
+  if (navigator.share) {
+    try { await navigator.share({ title: aberto.de, text: [aberto.de, aberto.pt].filter(Boolean).join(" — "), url }); } catch (e) {}
+  } else {
+    try { await navigator.clipboard.writeText(url); avisar("Link copiado"); } catch (e) { avisar(url); }
+  }
+});
+
+document.getElementById("fundo").addEventListener("click", () => fechar());
+document.getElementById("fechar").addEventListener("click", () => fechar());
 document.getElementById("ampliada").addEventListener("click", (e) => e.currentTarget.classList.remove("aberto"));
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") { document.getElementById("ampliada").classList.remove("aberto"); fechar(); } });
 
@@ -319,7 +367,10 @@ async function iniciar() {
   marcados = new Set([...marcados].filter((id) => ids.has(id)));
   salvarMarcados();
   document.getElementById("receitas").textContent = dados.receitas.join(" · ");
+  porSlug.clear();
+  for (const s of dados.secoes) for (const i of s.itens) porSlug.set(i.slug, i);
   desenhar();
+  aplicarEndereco();
 }
 
 // ---- Atualização e cache offline ----
