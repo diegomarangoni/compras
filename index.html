@@ -55,7 +55,7 @@ li.comprado .marca i::after { content: ""; position: absolute; left: 7px; top: 3
 .qtd { color: var(--muted); font-size: 15px; white-space: nowrap; }
 .seta { color: var(--line); font-size: 20px; }
 li.comprado .de, li.comprado .pt, li.comprado .qtd { color: var(--done); text-decoration: line-through; }
-.rodape { text-align: center; margin: 28px 16px 0; }
+.rodape { text-align: center; margin: 28px auto 0; padding: 0 16px; }
 .rodape button { font: inherit; font-size: 15px; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 20px; padding: 8px 16px; }
 .rodape button.confirmar { color: #c0392b; border-color: #c0392b; }
 .versao { color: var(--done); font-size: 12px; margin-top: 12px; }
@@ -241,19 +241,60 @@ async function iniciar() {
   document.getElementById("receitas").textContent = dados.receitas.join(" · ");
   desenhar();
 }
-iniciar();
 
-if ("serviceWorker" in navigator) {
-  const tinhaControle = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register("sw.js").then((reg) => reg.update()).catch(() => {});
-  // Lista nova instalada: recarrega uma vez para mostrá-la.
-  navigator.serviceWorker.addEventListener("controllerchange", () => { if (tinhaControle) location.reload(); });
-  fetch("sw.js", { cache: "no-store" }).then((r) => r.text()).then((t) => {
-    const m = t.match(/VERSAO = "([^"]+)"/); if (m) document.getElementById("versao").textContent = "versão " + m[1];
-  }).catch(() => {
-    caches.keys().then((ks) => { const k = ks.find((x) => x.startsWith("compras-")); if (k) document.getElementById("versao").textContent = "versão " + k.slice(8) + " (offline)"; });
-  });
+// ---- Atualização e cache offline ----
+// A cada abertura (e quando o app volta para a frente), lê versao.json direto do
+// servidor. Se a versão mudou, baixa TODOS os arquivos para um cache novo, ignorando
+// o cache HTTP, e só troca de versão quando tudo foi baixado. O sw.js serve o cache
+// da versão em uso; "?rede=" faz o pedido passar direto para a rede.
+const META = "compras-meta";
+const CHAVE_VERSAO = "versao-em-uso";
+let atualizando = false;
+
+function rodape(texto) { document.getElementById("versao").textContent = texto; }
+
+async function versaoEmUso() {
+  try {
+    const r = await (await caches.open(META)).match(CHAVE_VERSAO);
+    return r ? await r.text() : null;
+  } catch (e) { return null; }
 }
+
+async function atualizar() {
+  if (atualizando || !("caches" in window)) return;
+  atualizando = true;
+  const atual = await versaoEmUso();
+  try {
+    const r = await fetch("versao.json?rede=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw new Error("versao.json " + r.status);
+    const { versao, arquivos } = await r.json();
+    if (versao === atual) { rodape("versão " + atual); return; }
+    const nome = "compras-" + versao;
+    await caches.delete(nome);
+    const c = await caches.open(nome);
+    let n = 0;
+    for (const a of arquivos) {
+      rodape(`baixando lista nova… ${++n}/${arquivos.length}`);
+      const resp = await fetch(a + "?rede=" + versao, { cache: "reload" });
+      if (!resp.ok) throw new Error(a + " " + resp.status);
+      await c.put(a, resp);
+    }
+    await (await caches.open(META)).put(CHAVE_VERSAO, new Response(versao));
+    for (const k of await caches.keys()) if (k.startsWith("compras-") && k !== nome && k !== META) await caches.delete(k);
+    if (atual) location.reload(); else rodape("versão " + versao);
+  } catch (e) {
+    rodape(atual ? `versão ${atual} · sem conexão, usando a lista salva` : "sem conexão");
+  } finally {
+    atualizando = false;
+  }
+}
+
+iniciar().then(() => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").then((reg) => reg.update()).catch(() => {}).finally(atualizar);
+  }
+});
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") atualizar(); });
 </script>
 </body>
 </html>
