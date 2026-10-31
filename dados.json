@@ -301,7 +301,7 @@
      "de": "Salsiccia / grobe Bratwurst",
      "foto": null,
      "id": "Salsiccia / grobe Bratwurst — linguiça fresca",
-     "obs": "A \"Salsiccia Classica\" do REWE (crua, 94% porco) é a mais parecida com a linguiça toscana. Também serve \"grobe Bratwurst\" crua.",
+     "obs": "A \"Salsiccia Classica\" do REWE (crua, 94% porco) é a mais parecida com a linguiça toscana. Também serve \"grobe Bratwurst\" crua. A R&S é vendida solta no balcão de carnes, sem embalagem.",
      "produtos": [
       {
        "foto": "fotos/linguica-fresca-1.jpg",
@@ -310,19 +310,13 @@
        "url": "https://shop.rewe.de/p/rewe-feine-welt-salsiccia-fenchel-300g/8298740"
       },
       {
-       "foto": null,
+       "foto": "fotos/linguica-fresca-2.jpg",
        "loja": "REWE",
        "nome": "REWE Feine Welt Salsiccia Classica 300g",
        "url": "https://shop.rewe.de/p/rewe-feine-welt-salsiccia-classica-300g/8288229"
       },
       {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Frische Bratwurst grob",
-       "url": "https://shop.rewe.de/p/frische-bratwurst-grob/8442395"
-      },
-      {
-       "foto": null,
+       "foto": "fotos/linguica-fresca-3.jpg",
        "loja": "REWE",
        "nome": "R&S Salsiccia Natur",
        "url": "https://shop.rewe.de/p/r-s-salsiccia-natur/2794774"
@@ -350,16 +344,10 @@
        "url": "https://www.rewe.de/shop/p/ja-sahnejoghurt-nach-griechischer-art-1kg/8271521"
       },
       {
-       "foto": null,
+       "foto": "fotos/coalhada-fresca-2.jpg",
        "loja": "REWE",
        "nome": "REWE Bio Sahnejoghurt nach griechischer Art 500g",
        "url": "https://www.rewe.de/shop/p/rewe-bio-sahnejoghurt-nach-griechischer-art-500g/7710425"
-      },
-      {
-       "foto": null,
-       "loja": "Kaufland",
-       "nome": "Yayla Labneh-Käse 200g (marketplace online)",
-       "url": "https://www.kaufland.de/product/450625984/"
       }
      ],
      "pt": "coalhada fresca",
@@ -369,7 +357,7 @@
      "de": "Butter",
      "foto": null,
      "id": "Butter — manteiga",
-     "obs": "Prefira \"Süßrahmbutter\", a mais neutra; \"Mildgesäuerte Butter\" é levemente ácida. Evite \"Kräuterbutter\", que é manteiga de ervas.",
+     "obs": "Prefira \"Süßrahmbutter\", a mais neutra; \"Mildgesäuerte Butter\" é levemente ácida. Evite \"Kräuterbutter\", que é manteiga de ervas. A Sachsenmilch hoje vem na embalagem \"Unsere Butter streich fein\", como na foto.",
      "produtos": [
       {
        "foto": "fotos/manteiga-1.jpg",
@@ -378,13 +366,13 @@
        "url": "https://www.rewe.de/shop/p/thueringer-land-deutsche-markenbutter-250g/4003713"
       },
       {
-       "foto": null,
+       "foto": "fotos/manteiga-2.jpg",
        "loja": "REWE",
        "nome": "Sachsenmilch Deutsche Markenbutter 250g",
        "url": "https://shop.rewe.de/p/sachsenmilch-deutsche-markenbutter-250g/9537635"
       },
       {
-       "foto": null,
+       "foto": "fotos/manteiga-3.jpg",
        "loja": "REWE",
        "nome": "Deutsche Markenbutter Mildgesäuerte Butter 250g",
        "url": "https://www.rewe.de/shop/p/deutsche-markenbutter-mildgesaeuerte-butter-250g/9558571"
@@ -468,7 +456,7 @@
        "url": "https://shop.rewe.de/p/rewe-beste-wahl-paprika-edelsuess-gemahlen-50g/8005928"
       },
       {
-       "foto": null,
+       "foto": "fotos/urucum-2.jpg",
        "loja": "Kaufland",
        "nome": "AE Lotus Annatto Samen 100g (marketplace online)",
        "url": "https://www.kaufland.de/product/462038599/"

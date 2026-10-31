@@ -1,5 +1,5 @@
 // Gerado por tools/gerar_lista.py — não edite em _site/.
-const VERSAO = "0fd038969d96";
+const VERSAO = "6946906083bb";
 const CACHE = "compras-" + VERSAO;
 const ARQUIVOS = [
  "./",
@@ -9,12 +9,17 @@ const ARQUIVOS = [
  "fotos/cebola.jpg",
  "fotos/champignon.jpg",
  "fotos/coalhada-fresca-1.jpg",
+ "fotos/coalhada-fresca-2.jpg",
  "fotos/cogumelo-portobello.jpg",
  "fotos/fuba-1.jpg",
  "fotos/fuba-2.jpg",
  "fotos/linguica-fresca-1.jpg",
+ "fotos/linguica-fresca-2.jpg",
+ "fotos/linguica-fresca-3.jpg",
  "fotos/manjericao.jpg",
  "fotos/manteiga-1.jpg",
+ "fotos/manteiga-2.jpg",
+ "fotos/manteiga-3.jpg",
  "fotos/pimenta-de-cheiro.jpg",
  "fotos/pimentao-vermelho.jpg",
  "fotos/salsinha.jpg",
@@ -23,6 +28,7 @@ const ARQUIVOS = [
  "fotos/tomate.jpg",
  "fotos/tomilho.jpg",
  "fotos/urucum-1.jpg",
+ "fotos/urucum-2.jpg",
  "icone-180.png",
  "icone-512.png",
  "manifest.webmanifest"
