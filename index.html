@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Compras</title>
+<meta name="theme-color" content="#2f6b4f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Compras">
+<link rel="apple-touch-icon" href="icone-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root {
+  --bg: #f6f4ef; --card: #ffffff; --text: #1d1d1b; --muted: #6d6a63; --line: #e4e0d6;
+  --accent: #2f6b4f; --accent-soft: #e3efe8; --done: #a6a29a; --sheet: #ffffff; --shade: rgba(0,0,0,.35);
+  --photo-bg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141412; --card: #1f1f1c; --text: #f0eee8; --muted: #a29e95; --line: #33322d;
+    --accent: #6cc39a; --accent-soft: #23362c; --done: #6a675f; --sheet: #1f1f1c; --shade: rgba(0,0,0,.6);
+    --photo-bg: #f4f4f2;
+  }
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body {
+  font: 17px/1.35 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) calc(env(safe-area-inset-bottom) + 24px) env(safe-area-inset-left);
+}
+header, main, .rodape { max-width: 640px; margin-left: auto; margin-right: auto; }
+header { padding: 20px 16px 8px; }
+h1 { font-size: 30px; margin: 0; letter-spacing: -.02em; }
+.progresso { color: var(--muted); font-size: 15px; margin-top: 2px; }
+.barra { height: 4px; background: var(--line); border-radius: 2px; margin-top: 10px; overflow: hidden; }
+.barra > i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .25s; }
+.receitas { color: var(--muted); font-size: 14px; margin-top: 8px; }
+section { margin: 18px 12px 0; }
+section h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0 4px 6px; font-weight: 600; }
+section h2 span { text-transform: none; letter-spacing: 0; font-weight: 400; }
+section.feita h2 { color: var(--done); }
+ul { list-style: none; margin: 0; padding: 0; background: var(--card); border-radius: 12px; overflow: hidden; }
+li { display: flex; align-items: stretch; border-top: 1px solid var(--line); min-height: 60px; }
+li:first-child { border-top: 0; }
+.marca { flex: 0 0 56px; display: flex; align-items: center; justify-content: center; border: 0; background: none; padding: 0; cursor: pointer; }
+.marca i { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--muted); display: block; position: relative; }
+li.comprado .marca i { background: var(--accent); border-color: var(--accent); }
+li.comprado .marca i::after { content: ""; position: absolute; left: 7px; top: 3px; width: 7px; height: 12px; border: solid #fff; border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+.info { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; border: 0; background: none; color: inherit; font: inherit; text-align: left; padding: 10px 14px 10px 0; cursor: pointer; }
+.nomes { flex: 1; min-width: 0; }
+.de { font-weight: 600; }
+.pt { color: var(--muted); font-size: 15px; }
+.qtd { color: var(--muted); font-size: 15px; white-space: nowrap; }
+.seta { color: var(--line); font-size: 20px; }
+li.comprado .de, li.comprado .pt, li.comprado .qtd { color: var(--done); text-decoration: line-through; }
+.rodape { text-align: center; margin: 28px 16px 0; }
+.rodape button { font: inherit; font-size: 15px; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 20px; padding: 8px 16px; }
+.rodape button.confirmar { color: #c0392b; border-color: #c0392b; }
+.versao { color: var(--done); font-size: 12px; margin-top: 12px; }
+
+/* Painel de produtos */
+.fundo { position: fixed; inset: 0; background: var(--shade); opacity: 0; pointer-events: none; transition: opacity .2s; }
+.fundo.aberto { opacity: 1; pointer-events: auto; }
+.painel { position: fixed; left: 0; right: 0; bottom: 0; max-width: 640px; margin: 0 auto; max-height: 88vh; background: var(--sheet); border-radius: 16px 16px 0 0;
+  transform: translateY(100%); transition: transform .25s ease; display: flex; flex-direction: column;
+  padding-bottom: env(safe-area-inset-bottom); }
+.painel.aberto { transform: none; }
+.painel .topo { padding: 10px 16px 12px; border-bottom: 1px solid var(--line); position: relative; }
+.painel .alca { width: 40px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 10px; }
+.painel h3 { margin: 0; font-size: 22px; padding-right: 40px; }
+.painel .sub { color: var(--muted); }
+.fechar { position: absolute; right: 12px; top: 18px; width: 32px; height: 32px; border-radius: 50%; border: 0; background: var(--line); color: var(--text); font-size: 18px; line-height: 32px; padding: 0; }
+.painel .corpo { overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 12px 16px 20px; }
+.obs { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; font-size: 15px; margin-bottom: 14px; }
+.produto { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
+.produto:first-of-type { border-top: 0; }
+.produto img { width: 96px; height: 96px; object-fit: contain; background: var(--photo-bg); border-radius: 10px; flex: 0 0 96px; }
+.produto .sem { width: 96px; height: 96px; border-radius: 10px; background: var(--line); flex: 0 0 96px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; text-align: center; }
+.produto .loja { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+.produto .nome { font-size: 16px; }
+.produto a { font-size: 14px; color: var(--accent); }
+.foto-grande { width: 100%; max-height: 50vh; object-fit: contain; background: var(--photo-bg); border-radius: 12px; margin-bottom: 12px; }
+.ampliada { position: fixed; inset: 0; background: rgba(0,0,0,.92); display: none; align-items: center; justify-content: center; z-index: 10; }
+.ampliada.aberto { display: flex; }
+.ampliada img { max-width: 100%; max-height: 100%; object-fit: contain; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Compras</h1>
+  <div class="progresso" id="progresso"></div>
+  <div class="barra"><i id="barra"></i></div>
+  <div class="receitas" id="receitas"></div>
+</header>
+<main id="lista"></main>
+<div class="rodape">
+  <button id="limpar" type="button">Desmarcar tudo</button>
+  <div class="versao" id="versao"></div>
+</div>
+
+<div class="fundo" id="fundo"></div>
+<div class="painel" id="painel" role="dialog" aria-modal="true" aria-labelledby="p-titulo">
+  <div class="topo">
+    <div class="alca"></div>
+    <h3 id="p-titulo"></h3>
+    <div class="sub" id="p-sub"></div>
+    <button class="fechar" id="fechar" type="button" aria-label="Fechar">✕</button>
+  </div>
+  <div class="corpo" id="p-corpo"></div>
+</div>
+<div class="ampliada" id="ampliada"><img alt=""></div>
+
+<script>
+"use strict";
+const CHAVE = "compras.marcados";
+let dados = null;
+let marcados = new Set();
+
+function carregarMarcados() {
+  try { marcados = new Set(JSON.parse(localStorage.getItem(CHAVE) || "[]")); } catch (e) { marcados = new Set(); }
+}
+function salvarMarcados() {
+  try { localStorage.setItem(CHAVE, JSON.stringify([...marcados].sort())); } catch (e) {}
+}
+
+function el(tag, attrs, ...filhos) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (k === "class") n.className = v; else if (k.startsWith("on")) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v);
+  }
+  for (const f of filhos) if (f != null && f !== "") n.append(f);
+  return n;
+}
+
+function desenhar() {
+  const lista = document.getElementById("lista");
+  lista.textContent = "";
+  let total = 0, feitos = 0;
+  const secoes = dados.secoes.map((s) => {
+    const pend = s.itens.filter((i) => !marcados.has(i.id));
+    const comp = s.itens.filter((i) => marcados.has(i.id));
+    total += s.itens.length; feitos += comp.length;
+    return { s, itens: [...pend, ...comp], feita: pend.length === 0 };
+  });
+  // Seções já completas vão para o fim.
+  const ordem = [...secoes.filter((x) => !x.feita), ...secoes.filter((x) => x.feita)];
+  for (const { s, itens, feita } of ordem) {
+    const ul = el("ul");
+    for (const i of itens) {
+      const comprado = marcados.has(i.id);
+      ul.append(el("li", { class: comprado ? "comprado" : "" },
+        el("button", { class: "marca", type: "button", "aria-label": (comprado ? "Desmarcar " : "Marcar ") + i.de, onclick: () => alternar(i.id) }, el("i")),
+        el("button", { class: "info", type: "button", onclick: () => abrir(i) },
+          el("div", { class: "nomes" }, el("div", { class: "de" }, i.de), el("div", { class: "pt" }, i.pt)),
+          el("span", { class: "qtd" }, i.qtd),
+          el("span", { class: "seta" }, "›"))));
+    }
+    lista.append(el("section", { class: feita ? "feita" : "" },
+      el("h2", {}, s.de, s.pt ? el("span", {}, " · " + s.pt) : null), ul));
+  }
+  document.getElementById("progresso").textContent = `${feitos} de ${total} comprados`;
+  document.getElementById("barra").style.width = total ? (100 * feitos / total) + "%" : "0";
+}
+
+function alternar(id) {
+  if (marcados.has(id)) marcados.delete(id); else marcados.add(id);
+  salvarMarcados();
+  desenhar();
+}
+
+function img(src, cls) {
+  const i = el("img", { src, alt: "", loading: "lazy", class: cls || "" });
+  i.addEventListener("click", () => ampliar(src));
+  return i;
+}
+
+function abrir(i) {
+  document.getElementById("p-titulo").textContent = i.de;
+  document.getElementById("p-sub").textContent = [i.pt, i.qtd].filter(Boolean).join(" · ");
+  const corpo = document.getElementById("p-corpo");
+  corpo.textContent = "";
+  if (i.foto) corpo.append(img(i.foto, "foto-grande"));
+  if (i.obs) corpo.append(el("div", { class: "obs" }, i.obs));
+  for (const p of i.produtos) {
+    corpo.append(el("div", { class: "produto" },
+      p.foto ? img(p.foto) : (i.foto ? null : el("div", { class: "sem" }, "sem foto")),
+      el("div", {},
+        el("div", { class: "loja" }, p.loja),
+        el("div", { class: "nome" }, p.nome),
+        p.url ? el("a", { href: p.url, target: "_blank", rel: "noopener" }, "ver no site") : null)));
+  }
+  if (!i.foto && !i.obs && !i.produtos.length) corpo.append(el("div", { class: "sub" }, "Sem produtos cadastrados."));
+  corpo.scrollTop = 0;
+  document.getElementById("fundo").classList.add("aberto");
+  document.getElementById("painel").classList.add("aberto");
+}
+function fechar() {
+  document.getElementById("fundo").classList.remove("aberto");
+  document.getElementById("painel").classList.remove("aberto");
+}
+function ampliar(src) {
+  const a = document.getElementById("ampliada");
+  a.querySelector("img").src = src;
+  a.classList.add("aberto");
+}
+
+document.getElementById("fundo").addEventListener("click", fechar);
+document.getElementById("fechar").addEventListener("click", fechar);
+document.getElementById("ampliada").addEventListener("click", (e) => e.currentTarget.classList.remove("aberto"));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") { document.getElementById("ampliada").classList.remove("aberto"); fechar(); } });
+
+// Arrastar o painel para baixo fecha.
+(() => {
+  const p = document.getElementById("painel"); let y0 = null;
+  p.querySelector(".topo").addEventListener("touchstart", (e) => { y0 = e.touches[0].clientY; }, { passive: true });
+  p.querySelector(".topo").addEventListener("touchend", (e) => { if (y0 !== null && e.changedTouches[0].clientY - y0 > 60) fechar(); y0 = null; });
+})();
+
+const limpar = document.getElementById("limpar");
+let confirmarAte = 0;
+limpar.addEventListener("click", () => {
+  if (Date.now() < confirmarAte) {
+    marcados.clear(); salvarMarcados(); desenhar();
+    confirmarAte = 0; limpar.classList.remove("confirmar"); limpar.textContent = "Desmarcar tudo";
+  } else {
+    confirmarAte = Date.now() + 3000; limpar.classList.add("confirmar"); limpar.textContent = "Toque de novo para desmarcar tudo";
+    setTimeout(() => { if (Date.now() >= confirmarAte) { limpar.classList.remove("confirmar"); limpar.textContent = "Desmarcar tudo"; } }, 3100);
+  }
+});
+
+async function iniciar() {
+  carregarMarcados();
+  const r = await fetch("dados.json");
+  dados = await r.json();
+  // Esquece marcações de itens que não estão mais na lista.
+  const ids = new Set(dados.secoes.flatMap((s) => s.itens.map((i) => i.id)));
+  marcados = new Set([...marcados].filter((id) => ids.has(id)));
+  salvarMarcados();
+  document.getElementById("receitas").textContent = dados.receitas.join(" · ");
+  desenhar();
+}
+iniciar();
+
+if ("serviceWorker" in navigator) {
+  const tinhaControle = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.register("sw.js").then((reg) => reg.update()).catch(() => {});
+  // Lista nova instalada: recarrega uma vez para mostrá-la.
+  navigator.serviceWorker.addEventListener("controllerchange", () => { if (tinhaControle) location.reload(); });
+  fetch("sw.js", { cache: "no-store" }).then((r) => r.text()).then((t) => {
+    const m = t.match(/VERSAO = "([^"]+)"/); if (m) document.getElementById("versao").textContent = "versão " + m[1];
+  }).catch(() => {
+    caches.keys().then((ks) => { const k = ks.find((x) => x.startsWith("compras-")); if (k) document.getElementById("versao").textContent = "versão " + k.slice(8) + " (offline)"; });
+  });
+}
+</script>
+</body>
+</html>

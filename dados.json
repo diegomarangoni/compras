@@ -1,0 +1,484 @@
+{
+ "receitas": [
+  "Polenta com Ragu de Cogumelos",
+  "Arroz com Linguiça"
+ ],
+ "secoes": [
+  {
+   "de": "Obst & Gemüse",
+   "itens": [
+    {
+     "de": "Snackpaprika",
+     "foto": "fotos/pimenta-de-cheiro.jpg",
+     "id": "Snackpaprika — pimenta de cheiro",
+     "obs": "Não existe na Alemanha. O substituto é a \"Snackpaprika\": parecida no aroma e não arde.",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Bio Snackpaprika 200g",
+       "url": "https://www.rewe.de/shop/p/rewe-bio-snackpaprika-200g/9554594"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Bio Paprika Mix Mini 150g",
+       "url": "https://shop.rewe.de/p/rewe-bio-paprika-mix-mini-150g/2331708"
+      }
+     ],
+     "pt": "pimenta de cheiro",
+     "qtd": "1"
+    },
+    {
+     "de": "Knoblauch",
+     "foto": "fotos/alho.jpg",
+     "id": "Knoblauch — alho",
+     "obs": "Compre a cabeça inteira (\"Knolle\"), não o alho granulado (\"granuliert\").",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Knoblauch 200g im Netz",
+       "url": "https://shop.rewe.de/p/knoblauch-200g-im-netz/1041139"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Feine Welt Knoblauchzopf im Bund",
+       "url": "https://shop.rewe.de/p/rewe-feine-welt-knoblauchzopf-im-bund/7033274"
+      }
+     ],
+     "pt": "alho",
+     "qtd": "1 dente + 2 dentes"
+    },
+    {
+     "de": "Zwiebeln (gelb)",
+     "foto": "fotos/cebola.jpg",
+     "id": "Zwiebeln (gelb) — cebola",
+     "obs": "Speisezwiebeln é a cebola amarela comum, igual à do Brasil.",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Speisezwiebeln 1kg im Netz",
+       "url": "https://shop.rewe.de/p/speisezwiebeln-1kg-netz/1041138"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "LANDMARKT Zwiebeln gelb 1kg",
+       "url": "https://shop.rewe.de/p/landmarkt-zwiebeln-gelb-1kg/9021896"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Zwiebel Bravos gelb 500g Netz",
+       "url": "https://shop.rewe.de/p/zwiebel-bravos-gelb-500g-netz/1041129"
+      }
+     ],
+     "pt": "cebola",
+     "qtd": "2 + 1 grande"
+    },
+    {
+     "de": "Tomaten",
+     "foto": "fotos/tomate.jpg",
+     "id": "Tomaten — tomate",
+     "obs": "",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Beste Wahl Rispentomaten 650g",
+       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-rispentomaten-650g/1041188"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Strauchtomaten aus der Region",
+       "url": "https://www.rewe.de/shop/p/strauchtomaten-aus-der-region/7169743"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Rispentomaten ca. 100g",
+       "url": "https://www.rewe.de/shop/p/rispentomaten-ca-100g/475360"
+      }
+     ],
+     "pt": "tomate",
+     "qtd": "2 grandes"
+    },
+    {
+     "de": "Paprika rot",
+     "foto": "fotos/pimentao-vermelho.jpg",
+     "id": "Paprika rot — pimentão vermelho",
+     "obs": "Spitzpaprika é o pimentão vermelho comprido, mais doce. Também serve.",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Paprika rot 500g",
+       "url": "https://www.rewe.de/shop/p/paprika-rot-500g/1902921"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Spitzpaprika rot 500g",
+       "url": "https://www.rewe.de/shop/p/spitzpaprika-rot-500g/2212948"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Paprika Mix 500g",
+       "url": "https://www.rewe.de/shop/p/paprika-mix-500g/1040657"
+      }
+     ],
+     "pt": "pimentão vermelho",
+     "qtd": "1"
+    },
+    {
+     "de": "Zucchini",
+     "foto": "fotos/abobrinha.jpg",
+     "id": "Zucchini — abobrinha",
+     "obs": "A abobrinha italiana é \"Zucchini\".",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Zucchini grün ca. 350g",
+       "url": "https://www.rewe.de/shop/p/zucchini-gruen-ca-350g/482161"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Bio Zucchini 500g",
+       "url": "https://shop.rewe.de/p/rewe-bio-zucchini-500g/2577507"
+      }
+     ],
+     "pt": "abobrinha",
+     "qtd": "½ média"
+    },
+    {
+     "de": "Champignons",
+     "foto": "fotos/champignon.jpg",
+     "id": "Champignons — champignon",
+     "obs": "Compre fresco; \"Pilze\" em lata ou vidro são em conserva.",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Beste Wahl Champignons braun 250g",
+       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-champignons-braun-250g/1928831"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Bio Champignons braun 250g",
+       "url": "https://www.rewe.de/shop/p/rewe-bio-champignons-braun-250g/8312738"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Champignons weiß 400g",
+       "url": "https://www.rewe.de/shop/p/champignons-weiss-400g/2867271"
+      }
+     ],
+     "pt": "champignon",
+     "qtd": "150 g"
+    },
+    {
+     "de": "Portobello Pilze / Riesenchampignons",
+     "foto": "fotos/cogumelo-portobello.jpg",
+     "id": "Portobello Pilze / Riesenchampignons — cogumelo portobello",
+     "obs": "O portobello é o champignon marrom grande. \"Riesenchampignons\" também servem, mesmo se forem brancos.",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Pilzhof Nettetal Portobello-Pilze 2 Stück",
+       "url": "https://shop.rewe.de/p/pilzhof-nettetal-portobello-pilze-2-stueck/8839341"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Riesenchampignons ca. 200g",
+       "url": "https://shop.rewe.de/p/riesenchampignons/479349"
+      }
+     ],
+     "pt": "cogumelo portobello",
+     "qtd": "150 g"
+    }
+   ],
+   "pt": "hortifruti"
+  },
+  {
+   "de": "Frische Kräuter",
+   "itens": [
+    {
+     "de": "Petersilie (glatt)",
+     "foto": "fotos/salsinha.jpg",
+     "id": "Petersilie (glatt) — salsinha",
+     "obs": "Compre a \"glatte\" (lisa), não a \"krause\" (crespa).",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Glatte Petersilie im Bund aus der Region",
+       "url": "https://www.rewe.de/shop/p/glatte-petersilie-im-bund-aus-der-region/1923402"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Petersilie glatt im Topf aus der Region",
+       "url": "https://shop.rewe.de/p/petersilie-glatt-im-topf-aus-der-region-1-stueck/8383136"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Glatte Petersilie 30g",
+       "url": "https://www.rewe.de/shop/p/glatte-petersilie-30g/1045885"
+      }
+     ],
+     "pt": "salsinha",
+     "qtd": ""
+    },
+    {
+     "de": "Basilikum",
+     "foto": "fotos/manjericao.jpg",
+     "id": "Basilikum — manjericão",
+     "obs": "Fresco, em vaso, na seção de ervas.",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Basilikum im Topf",
+       "url": "https://www.rewe.de/shop/p/basilikum-im-topf/1045887"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Bio Basilikum im Topf",
+       "url": "https://www.rewe.de/shop/p/rewe-bio-basilikum-im-topf/1045916"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Bio Kräuter Basilikum XL im Topf",
+       "url": "https://www.rewe.de/shop/p/bio-kraeuter-basilikum-xl-im-topf/8363134"
+      }
+     ],
+     "pt": "manjericão",
+     "qtd": ""
+    },
+    {
+     "de": "Thymian",
+     "foto": "fotos/tomilho.jpg",
+     "id": "Thymian — tomilho",
+     "obs": "Fresco, em vaso ou maço, na seção de ervas.",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Thymian im Topf",
+       "url": "https://www.rewe.de/shop/p/thymian-im-topf/1045897"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Thymian im Bund aus der Region 15g",
+       "url": "https://www.rewe.de/shop/p/thymian-im-bund-aus-der-region-15g/2544582"
+      }
+     ],
+     "pt": "tomilho",
+     "qtd": "2 galhos"
+    }
+   ],
+   "pt": "ervas frescas"
+  },
+  {
+   "de": "Fleisch & Fisch (Kühltheke)",
+   "itens": [
+    {
+     "de": "Salsiccia / grobe Bratwurst",
+     "foto": null,
+     "id": "Salsiccia / grobe Bratwurst — linguiça fresca",
+     "obs": "A \"Salsiccia Classica\" do REWE (crua, 94% porco) é a mais parecida com a linguiça toscana. Também serve \"grobe Bratwurst\" crua.",
+     "produtos": [
+      {
+       "foto": "fotos/linguica-fresca-1.jpg",
+       "loja": "REWE",
+       "nome": "REWE Feine Welt Salsiccia Fenchel 300g",
+       "url": "https://shop.rewe.de/p/rewe-feine-welt-salsiccia-fenchel-300g/8298740"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Feine Welt Salsiccia Classica 300g",
+       "url": "https://shop.rewe.de/p/rewe-feine-welt-salsiccia-classica-300g/8288229"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Frische Bratwurst grob",
+       "url": "https://shop.rewe.de/p/frische-bratwurst-grob/8442395"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "R&S Salsiccia Natur",
+       "url": "https://shop.rewe.de/p/r-s-salsiccia-natur/2794774"
+      }
+     ],
+     "pt": "linguiça fresca",
+     "qtd": "300 g"
+    }
+   ],
+   "pt": "carnes e peixes (refrigerados)"
+  },
+  {
+   "de": "Kühlregal (Milch, Käse, Eier)",
+   "itens": [
+    {
+     "de": "Griechischer Joghurt 10% / Labneh",
+     "foto": null,
+     "id": "Griechischer Joghurt 10% / Labneh — coalhada fresca",
+     "obs": "Não há Labneh no REWE nem no Netto. O iogurte grego 10% escorrido uma noite num pano vira uma coalhada mais firme. Mercados turcos e árabes costumam ter Labneh.",
+     "produtos": [
+      {
+       "foto": "fotos/coalhada-fresca-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Sahnejoghurt nach griechischer Art 1kg",
+       "url": "https://www.rewe.de/shop/p/ja-sahnejoghurt-nach-griechischer-art-1kg/8271521"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Bio Sahnejoghurt nach griechischer Art 500g",
+       "url": "https://www.rewe.de/shop/p/rewe-bio-sahnejoghurt-nach-griechischer-art-500g/7710425"
+      },
+      {
+       "foto": null,
+       "loja": "Kaufland",
+       "nome": "Yayla Labneh-Käse 200g (marketplace online)",
+       "url": "https://www.kaufland.de/product/450625984/"
+      }
+     ],
+     "pt": "coalhada fresca",
+     "qtd": ""
+    },
+    {
+     "de": "Butter",
+     "foto": null,
+     "id": "Butter — manteiga",
+     "obs": "Prefira \"Süßrahmbutter\", a mais neutra; \"Mildgesäuerte Butter\" é levemente ácida. Evite \"Kräuterbutter\", que é manteiga de ervas.",
+     "produtos": [
+      {
+       "foto": "fotos/manteiga-1.jpg",
+       "loja": "REWE",
+       "nome": "Thüringer Land Deutsche Markenbutter 250g",
+       "url": "https://www.rewe.de/shop/p/thueringer-land-deutsche-markenbutter-250g/4003713"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Sachsenmilch Deutsche Markenbutter 250g",
+       "url": "https://shop.rewe.de/p/sachsenmilch-deutsche-markenbutter-250g/9537635"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Deutsche Markenbutter Mildgesäuerte Butter 250g",
+       "url": "https://www.rewe.de/shop/p/deutsche-markenbutter-mildgesaeuerte-butter-250g/9558571"
+      }
+     ],
+     "pt": "manteiga",
+     "qtd": "50 g"
+    }
+   ],
+   "pt": "refrigerados (leite, queijo, ovos)"
+  },
+  {
+   "de": "Nudeln, Reis & Hülsenfrüchte",
+   "itens": [
+    {
+     "de": "Maisgrieß / Polenta",
+     "foto": null,
+     "id": "Maisgrieß / Polenta — fubá",
+     "obs": "Fubá é \"Maisgrieß\" ou \"Polenta\". Evite \"Minuten-Polenta\" e \"2-Minuten-Polenta\", que são pré-cozidas.",
+     "produtos": [
+      {
+       "foto": "fotos/fuba-1.jpg",
+       "loja": "REWE",
+       "nome": "Davert Bio Maisgrieß für Polenta 500g",
+       "url": "https://shop.rewe.de/p/davert-bio-maisgriess-fuer-polenta-500g/8757933"
+      },
+      {
+       "foto": "fotos/fuba-2.jpg",
+       "loja": "REWE",
+       "nome": "Rinatura Bio Maisgrieß 500g",
+       "url": "https://shop.rewe.de/p/rinatura-bio-maisgriess-500g/6089062"
+      }
+     ],
+     "pt": "fubá",
+     "qtd": "150 g"
+    }
+   ],
+   "pt": "massas, arroz e leguminosas"
+  },
+  {
+   "de": "Konserven",
+   "itens": [
+    {
+     "de": "Tomaten geschält (Dose)",
+     "foto": null,
+     "id": "Tomaten geschält (Dose) — tomate pelado em lata",
+     "obs": "Tomate pelado inteiro é \"ganze Tomaten geschält\"; \"stückige Tomaten\" é picado em pedaços e também serve. Evite as versões \"mit Kräutern\" ou \"mit Basilikum\", já temperadas.",
+     "produtos": [
+      {
+       "foto": "fotos/tomate-pelado-em-lata-1.jpg",
+       "loja": "REWE",
+       "nome": "Delverde Ganze Tomaten geschält 400g",
+       "url": "https://www.rewe.de/shop/p/delverde-ganze-tomaten-geschaelt-400g/9608519"
+      },
+      {
+       "foto": "fotos/tomate-pelado-em-lata-2.jpg",
+       "loja": "REWE",
+       "nome": "Biozentrale Bio Tomaten geschält 400g",
+       "url": "https://shop.rewe.de/p/biozentrale-bio-tomaten-geschaelt-400g/912896"
+      }
+     ],
+     "pt": "tomate pelado em lata",
+     "qtd": "240 g"
+    }
+   ],
+   "pt": "enlatados e conservas"
+  },
+  {
+   "de": "Gewürze",
+   "itens": [
+    {
+     "de": "Annatto / Achiote",
+     "foto": null,
+     "id": "Annatto / Achiote — urucum",
+     "obs": "Não existe no REWE nem no Netto. Substituto: \"Paprika edelsüß\" do REWE. O urucum de verdade só aparece em sementes no marketplace online do Kaufland ou em mercados asiáticos e latinos.",
+     "produtos": [
+      {
+       "foto": "fotos/urucum-1.jpg",
+       "loja": "REWE",
+       "nome": "REWE Beste Wahl Paprika edelsüß gemahlen 50g (substituto)",
+       "url": "https://shop.rewe.de/p/rewe-beste-wahl-paprika-edelsuess-gemahlen-50g/8005928"
+      },
+      {
+       "foto": null,
+       "loja": "Kaufland",
+       "nome": "AE Lotus Annatto Samen 100g (marketplace online)",
+       "url": "https://www.kaufland.de/product/462038599/"
+      }
+     ],
+     "pt": "urucum",
+     "qtd": "¼ c. chá"
+    }
+   ],
+   "pt": "temperos"
+  }
+ ]
+}
