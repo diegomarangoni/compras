@@ -61,18 +61,22 @@ li.comprado .de, li.comprado .pt, li.comprado .qtd { color: var(--done); text-de
 .versao { color: var(--done); font-size: 12px; margin-top: 12px; }
 
 /* Painel de produtos */
-.fundo { position: fixed; inset: 0; background: var(--shade); opacity: 0; pointer-events: none; transition: opacity .2s; }
+.fundo { position: fixed; inset: 0; background: var(--shade); opacity: 0; pointer-events: none; transition: opacity .2s; touch-action: none; }
+/* Lista de trás travada enquanto o painel está aberto. */
+body.travado { position: fixed; left: 0; right: 0; overflow: hidden; }
 .fundo.aberto { opacity: 1; pointer-events: auto; }
 .painel { position: fixed; left: 0; right: 0; bottom: 0; max-width: 640px; margin: 0 auto; max-height: 88vh; background: var(--sheet); border-radius: 16px 16px 0 0;
   transform: translateY(100%); transition: transform .25s ease; display: flex; flex-direction: column;
   padding-bottom: env(safe-area-inset-bottom); }
 .painel.aberto { transform: none; }
+.painel.arrastando, .fundo.arrastando { transition: none; }
 .painel .topo { padding: 10px 16px 12px; border-bottom: 1px solid var(--line); position: relative; }
 .painel .alca { width: 40px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 10px; }
 .painel h3 { margin: 0; font-size: 22px; padding-right: 40px; }
 .painel .sub { color: var(--muted); }
 .fechar { position: absolute; right: 12px; top: 18px; width: 32px; height: 32px; border-radius: 50%; border: 0; background: var(--line); color: var(--text); font-size: 18px; line-height: 32px; padding: 0; }
-.painel .corpo { overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 12px 16px 20px; }
+.painel .corpo { overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; flex: 1 1 auto; min-height: 0; padding: 12px 16px 20px; }
+.painel .topo { touch-action: none; }
 .obs { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; font-size: 15px; margin-bottom: 14px; }
 .produto { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
 .produto:first-of-type { border-top: 0; }
@@ -193,12 +197,33 @@ function abrir(i) {
   }
   if (!i.foto && !i.obs && !i.produtos.length) corpo.append(el("div", { class: "sub" }, "Sem produtos cadastrados."));
   corpo.scrollTop = 0;
+  travarFundo();
   document.getElementById("fundo").classList.add("aberto");
   document.getElementById("painel").classList.add("aberto");
 }
 function fechar() {
-  document.getElementById("fundo").classList.remove("aberto");
-  document.getElementById("painel").classList.remove("aberto");
+  const p = document.getElementById("painel"), f = document.getElementById("fundo");
+  p.classList.remove("arrastando"); f.classList.remove("arrastando");
+  p.style.transform = ""; f.style.opacity = "";
+  f.classList.remove("aberto");
+  p.classList.remove("aberto");
+  destravarFundo();
+}
+
+// Trava a lista de trás no lugar (o iOS ignora overflow:hidden no body).
+let scrollSalvo = null;
+function travarFundo() {
+  if (scrollSalvo !== null) return;
+  scrollSalvo = window.scrollY;
+  document.body.style.top = -scrollSalvo + "px";
+  document.body.classList.add("travado");
+}
+function destravarFundo() {
+  if (scrollSalvo === null) return;
+  document.body.classList.remove("travado");
+  document.body.style.top = "";
+  window.scrollTo(0, scrollSalvo);
+  scrollSalvo = null;
 }
 function ampliar(src) {
   const a = document.getElementById("ampliada");
@@ -211,11 +236,66 @@ document.getElementById("fechar").addEventListener("click", fechar);
 document.getElementById("ampliada").addEventListener("click", (e) => e.currentTarget.classList.remove("aberto"));
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") { document.getElementById("ampliada").classList.remove("aberto"); fechar(); } });
 
-// Arrastar o painel para baixo fecha.
+// Arrastar o painel para baixo fecha (como as folhas do iOS):
+// - começando no título, o arraste sempre move o painel;
+// - no conteúdo, puxar para baixo com o conteúdo no topo move o painel; senão, rola o conteúdo;
+// - se o conteúdo chega ao topo no meio do gesto, o painel passa a acompanhar o dedo.
+// Ao soltar, fecha se arrastou mais de 1/4 da altura (ou 120 px) ou com um peteleco rápido.
 (() => {
-  const p = document.getElementById("painel"); let y0 = null;
-  p.querySelector(".topo").addEventListener("touchstart", (e) => { y0 = e.touches[0].clientY; }, { passive: true });
-  p.querySelector(".topo").addEventListener("touchend", (e) => { if (y0 !== null && e.changedTouches[0].clientY - y0 > 60) fechar(); y0 = null; });
+  const p = document.getElementById("painel"), f = document.getElementById("fundo"), corpo = document.getElementById("p-corpo");
+  let toque = null;
+
+  p.addEventListener("touchstart", (e) => {
+    if (e.touches.length !== 1) { toque = null; return; }
+    const y = e.touches[0].clientY;
+    toque = { y0: y, ultimo: y, base: y, modo: null, noTitulo: !corpo.contains(e.target), hist: [[e.timeStamp, y]] };
+  }, { passive: true });
+
+  p.addEventListener("touchmove", (e) => {
+    if (!toque) return;
+    const y = e.touches[0].clientY;
+    const desce = y > toque.ultimo;
+    toque.hist.push([e.timeStamp, y]);
+    if (toque.hist.length > 6) toque.hist.shift();
+    const rolavel = corpo.scrollHeight > corpo.clientHeight + 1;
+    if (!toque.modo) {
+      const dy = y - toque.y0;
+      if (Math.abs(dy) < 6) { toque.ultimo = y; return; }
+      toque.modo = (toque.noTitulo || (dy > 0 && corpo.scrollTop <= 0)) ? "arrastar" : "rolar";
+      toque.base = y;
+    } else if (toque.modo === "rolar" && desce && corpo.scrollTop <= 0) {
+      toque.modo = "arrastar"; toque.base = y;
+    }
+    toque.ultimo = y;
+    if (toque.modo === "arrastar") {
+      e.preventDefault();
+      const d = Math.max(0, y - toque.base);
+      p.classList.add("arrastando"); f.classList.add("arrastando");
+      p.style.transform = `translateY(${d}px)`;
+      f.style.opacity = String(Math.max(0, 1 - d / p.offsetHeight));
+    } else if (!rolavel) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  function soltar() {
+    if (!toque) return;
+    const t = toque; toque = null;
+    if (t.modo !== "arrastar") return;
+    const d = Math.max(0, t.ultimo - t.base);
+    const [t0, y0] = t.hist[0], [t1, y1] = t.hist[t.hist.length - 1];
+    const vel = t1 > t0 ? (y1 - y0) / (t1 - t0) : 0; // px/ms
+    if (d > Math.min(120, p.offsetHeight / 4) || (vel > 0.5 && d > 20)) {
+      fechar();
+    } else {
+      p.classList.remove("arrastando"); f.classList.remove("arrastando");
+      p.style.transform = ""; f.style.opacity = "";
+    }
+  }
+  p.addEventListener("touchend", soltar);
+  p.addEventListener("touchcancel", soltar);
+  // Nada de rolar a lista de trás tocando no fundo escuro.
+  f.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
 })();
 
 const limpar = document.getElementById("limpar");
