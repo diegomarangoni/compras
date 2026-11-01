@@ -12,6 +12,7 @@
      "foto": "fotos/pimenta-de-cheiro.jpg",
      "id": "Snackpaprika — pimenta de cheiro",
      "obs": "Não existe na Alemanha. O substituto é a \"Snackpaprika\": parecida no aroma e não arde.",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -35,6 +36,7 @@
      "foto": "fotos/alho.jpg",
      "id": "Knoblauch — alho",
      "obs": "Compre a cabeça inteira (\"Knolle\"), não o alho granulado (\"granuliert\").",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -58,6 +60,7 @@
      "foto": "fotos/cebola.jpg",
      "id": "Zwiebeln (gelb) — cebola",
      "obs": "Speisezwiebeln é a cebola amarela comum, igual à do Brasil.",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -87,6 +90,7 @@
      "foto": "fotos/tomate.jpg",
      "id": "Tomaten — tomate",
      "obs": "",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -116,6 +120,7 @@
      "foto": "fotos/pimentao-vermelho.jpg",
      "id": "Paprika rot — pimentão vermelho",
      "obs": "Spitzpaprika é o pimentão vermelho comprido, mais doce. Também serve.",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -145,6 +150,7 @@
      "foto": "fotos/abobrinha.jpg",
      "id": "Zucchini — abobrinha",
      "obs": "A abobrinha italiana é \"Zucchini\".",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -168,6 +174,7 @@
      "foto": "fotos/champignon.jpg",
      "id": "Champignons — champignon",
      "obs": "Compre fresco; \"Pilze\" em lata ou vidro são em conserva.",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -197,6 +204,7 @@
      "foto": "fotos/cogumelo-portobello.jpg",
      "id": "Portobello Pilze / Riesenchampignons — cogumelo portobello",
      "obs": "O portobello é o champignon marrom grande. \"Riesenchampignons\" também servem, mesmo se forem brancos.",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -220,6 +228,7 @@
      "foto": "fotos/limao.jpg",
      "id": "Limetten — limão (opcional)",
      "obs": "O limão taiti é a \"Limette\" (verde); a \"Zitrone\" é o limão-siciliano (amarelo).",
+     "opcional": true,
      "produtos": [
       {
        "foto": null,
@@ -241,7 +250,7 @@
       }
      ],
      "pt": "limão",
-     "qtd": "opcional",
+     "qtd": "",
      "slug": "limao"
     }
    ],
@@ -255,6 +264,7 @@
      "foto": "fotos/salsinha.jpg",
      "id": "Petersilie (glatt) — salsinha",
      "obs": "Compre a \"glatte\" (lisa), não a \"krause\" (crespa).",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -284,6 +294,7 @@
      "foto": "fotos/manjericao.jpg",
      "id": "Basilikum — manjericão",
      "obs": "Fresco, em vaso, na seção de ervas.",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -313,6 +324,7 @@
      "foto": "fotos/tomilho.jpg",
      "id": "Thymian — tomilho",
      "obs": "Fresco, em vaso ou maço, na seção de ervas.",
+     "opcional": false,
      "produtos": [
       {
        "foto": null,
@@ -342,6 +354,7 @@
      "foto": null,
      "id": "Salsiccia / grobe Bratwurst — linguiça fresca",
      "obs": "A \"Salsiccia Classica\" do REWE (crua, 94% porco) é a mais parecida com a linguiça toscana. Também serve \"grobe Bratwurst\" crua. A R&S é vendida solta no balcão de carnes, sem embalagem.",
+     "opcional": false,
      "produtos": [
       {
        "foto": "fotos/linguica-fresca-1.jpg",
@@ -377,6 +390,7 @@
      "foto": null,
      "id": "Griechischer Joghurt 10% / Labneh — coalhada fresca",
      "obs": "Não há Labneh no REWE nem no Netto. O iogurte grego 10% escorrido uma noite num pano vira uma coalhada mais firme. Mercados turcos e árabes costumam ter Labneh.",
+     "opcional": false,
      "produtos": [
       {
        "foto": "fotos/coalhada-fresca-1.jpg",
@@ -400,6 +414,7 @@
      "foto": null,
      "id": "Butter — manteiga",
      "obs": "Prefira \"Süßrahmbutter\", a mais neutra; \"Mildgesäuerte Butter\" é levemente ácida. Evite \"Kräuterbutter\", que é manteiga de ervas. A Sachsenmilch hoje vem na embalagem \"Unsere Butter streich fein\", como na foto.",
+     "opcional": false,
      "produtos": [
       {
        "foto": "fotos/manteiga-1.jpg",
@@ -429,6 +444,7 @@
      "foto": null,
      "id": "Parmesan / Grana Padano — parmesão (opcional)",
      "obs": "Compre em pedaço, \"am Stück\", e rale na hora; evite \"gerieben\", já ralado. O Parmigiano \"am Stück\" do balcão de queijos é cortado na hora, sem embalagem.",
+     "opcional": true,
      "produtos": [
       {
        "foto": "fotos/parmesao-1.jpg",
@@ -450,7 +466,7 @@
       }
      ],
      "pt": "parmesão",
-     "qtd": "opcional",
+     "qtd": "",
      "slug": "parmesao"
     }
    ],
@@ -464,6 +480,7 @@
      "foto": null,
      "id": "Maisgrieß / Polenta — fubá",
      "obs": "Fubá é \"Maisgrieß\" ou \"Polenta\". Evite \"Minuten-Polenta\" e \"2-Minuten-Polenta\", que são pré-cozidas.",
+     "opcional": false,
      "produtos": [
       {
        "foto": "fotos/fuba-1.jpg",
@@ -493,6 +510,7 @@
      "foto": null,
      "id": "Tomaten geschält (Dose) — tomate pelado em lata",
      "obs": "Tomate pelado inteiro é \"ganze Tomaten geschält\"; \"stückige Tomaten\" é picado em pedaços e também serve. Evite as versões \"mit Kräutern\" ou \"mit Basilikum\", já temperadas.",
+     "opcional": false,
      "produtos": [
       {
        "foto": "fotos/tomate-pelado-em-lata-1.jpg",
@@ -522,6 +540,7 @@
      "foto": null,
      "id": "Annatto / Achiote — urucum",
      "obs": "Não existe no REWE nem no Netto. Substituto: \"Paprika edelsüß\" do REWE. O urucum de verdade só aparece em sementes no marketplace online do Kaufland ou em mercados asiáticos e latinos.",
+     "opcional": false,
      "produtos": [
       {
        "foto": "fotos/urucum-1.jpg",
@@ -545,6 +564,7 @@
      "foto": null,
      "id": "Pfeffer schwarz (gemahlen) — pimenta-do-reino (opcional)",
      "obs": "A foto da Ostmann é do saquinho; o produto listado no Netto é o pote com tampa dosadora (\"Streuer\").",
+     "opcional": true,
      "produtos": [
       {
        "foto": "fotos/pimenta-do-reino-1.jpg",
@@ -560,7 +580,7 @@
       }
      ],
      "pt": "pimenta-do-reino",
-     "qtd": "opcional",
+     "qtd": "",
      "slug": "pimenta-do-reino"
     },
     {
@@ -568,6 +588,7 @@
      "foto": null,
      "id": "Chiliflocken — pimenta calabresa em flocos (opcional)",
      "obs": "",
+     "opcional": true,
      "produtos": [
       {
        "foto": "fotos/pimenta-calabresa-em-flocos-1.jpg",
@@ -589,7 +610,7 @@
       }
      ],
      "pt": "pimenta calabresa em flocos",
-     "qtd": "opcional",
+     "qtd": "",
      "slug": "pimenta-calabresa-em-flocos"
     },
     {
@@ -597,6 +618,7 @@
      "foto": null,
      "id": "Zimtstangen — canela em pau (opcional)",
      "obs": "Evite \"Zimt gemahlen\", canela em pó. Sem \"Ceylon\" no nome, geralmente é cássia, mais forte.",
+     "opcional": true,
      "produtos": [
       {
        "foto": "fotos/canela-em-pau-1.jpg",
@@ -618,7 +640,7 @@
       }
      ],
      "pt": "canela em pau",
-     "qtd": "opcional",
+     "qtd": "",
      "slug": "canela-em-pau"
     }
    ],

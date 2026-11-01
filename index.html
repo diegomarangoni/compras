@@ -53,6 +53,9 @@ li.comprado .marca i::after { content: ""; position: absolute; left: 7px; top: 3
 .de { font-weight: 600; }
 .pt { color: var(--muted); font-size: 15px; }
 .qtd { color: var(--muted); font-size: 15px; white-space: nowrap; }
+.etiqueta { display: inline-block; vertical-align: middle; margin-left: 6px; font-size: 12px; font-weight: 600; line-height: 1; color: var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 3px 8px; text-decoration: none; }
+li.comprado .etiqueta { color: var(--done); background: none; padding: 0; }
+.painel h3 .etiqueta { font-size: 13px; position: relative; top: -2px; }
 .seta { color: var(--line); font-size: 20px; }
 li.comprado .de, li.comprado .pt, li.comprado .qtd { color: var(--done); text-decoration: line-through; }
 .rodape { text-align: center; margin: 28px auto 0; padding: 0 16px; }
@@ -167,7 +170,7 @@ function desenhar() {
       ul.append(el("li", { class: comprado ? "comprado" : "" },
         el("button", { class: "marca", type: "button", "aria-label": (comprado ? "Desmarcar " : "Marcar ") + i.de, onclick: () => alternar(i.id) }, el("i")),
         el("button", { class: "info", type: "button", onclick: () => abrir(i) },
-          el("div", { class: "nomes" }, el("div", { class: "de" }, i.de), el("div", { class: "pt" }, i.pt)),
+          el("div", { class: "nomes" }, el("div", { class: "de" }, i.de, etiqueta(i)), el("div", { class: "pt" }, i.pt)),
           el("span", { class: "qtd" }, i.qtd),
           el("span", { class: "seta" }, "›"))));
     }
@@ -176,6 +179,10 @@ function desenhar() {
   }
   document.getElementById("progresso").textContent = `${feitos} de ${total} comprados`;
   document.getElementById("barra").style.width = total ? (100 * feitos / total) + "%" : "0";
+}
+
+function etiqueta(i) {
+  return i.opcional ? el("span", { class: "etiqueta" }, "opcional") : null;
 }
 
 function alternar(id) {
@@ -198,7 +205,9 @@ const porSlug = new Map();
 function abrir(i, { historico = true } = {}) {
   aberto = i;
   if (historico && location.hash !== "#" + i.slug) history.pushState({ painel: i.slug }, "", "#" + i.slug);
-  document.getElementById("p-titulo").textContent = i.de;
+  const titulo = document.getElementById("p-titulo");
+  titulo.textContent = "";
+  titulo.append(i.de, etiqueta(i) || "");
   document.getElementById("p-sub").textContent = [i.pt, i.qtd].filter(Boolean).join(" · ");
   const corpo = document.getElementById("p-corpo");
   corpo.textContent = "";
