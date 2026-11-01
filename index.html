@@ -312,7 +312,8 @@ document.getElementById("compartilhar").addEventListener("click", async () => {
   if (!aberto) return;
   const url = location.origin + location.pathname + "#" + aberto.slug;
   if (navigator.share) {
-    try { await navigator.share({ title: aberto.de, text: [aberto.de, aberto.pt].filter(Boolean).join(" — "), url }); } catch (e) {}
+    // Só o link: com "title"/"text" junto, alguns destinos (Brave, Copiar no iOS) colam o texto no link.
+    try { await navigator.share({ url }); } catch (e) {}
   } else {
     try { await navigator.clipboard.writeText(url); avisar("Link copiado"); } catch (e) { avisar(url); }
   }
