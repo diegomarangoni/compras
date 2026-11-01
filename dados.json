@@ -1,7 +1,6 @@
 {
  "receitas": [
-  "Arroz com Linguiça",
-  "Polenta com Ragu de Cogumelos"
+  "Arroz com Linguiça"
  ],
  "secoes": [
   {
@@ -54,7 +53,7 @@
       }
      ],
      "pt": "alho",
-     "qtd": "3 dente(s)",
+     "qtd": "2 dente(s)",
      "slug": "alho"
     },
     {
@@ -85,7 +84,7 @@
       }
      ],
      "pt": "cebola",
-     "qtd": "3",
+     "qtd": "2",
      "slug": "cebola"
     },
     {
@@ -151,91 +150,10 @@
      "slug": "pimentao-vermelho"
     },
     {
-     "de": "Zucchini",
-     "foto": "fotos/abobrinha.jpg",
-     "id": "Zucchini — abobrinha",
-     "marcado": true,
-     "obs": "A abobrinha italiana é \"Zucchini\".",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Zucchini grün ca. 350g",
-       "url": "https://www.rewe.de/shop/p/zucchini-gruen-ca-350g/482161"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "REWE Bio Zucchini 500g",
-       "url": "https://shop.rewe.de/p/rewe-bio-zucchini-500g/2577507"
-      }
-     ],
-     "pt": "abobrinha",
-     "qtd": "½",
-     "slug": "abobrinha"
-    },
-    {
-     "de": "Champignons",
-     "foto": "fotos/champignon.jpg",
-     "id": "Champignons — champignon",
-     "marcado": true,
-     "obs": "Compre fresco; \"Pilze\" em lata ou vidro são em conserva.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "REWE Beste Wahl Champignons braun 250g",
-       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-champignons-braun-250g/1928831"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "REWE Bio Champignons braun 250g",
-       "url": "https://www.rewe.de/shop/p/rewe-bio-champignons-braun-250g/8312738"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Champignons weiß 400g",
-       "url": "https://www.rewe.de/shop/p/champignons-weiss-400g/2867271"
-      }
-     ],
-     "pt": "champignon",
-     "qtd": "150 g",
-     "slug": "champignon"
-    },
-    {
-     "de": "Portobello Pilze / Riesenchampignons",
-     "foto": "fotos/cogumelo-portobello.jpg",
-     "id": "Portobello Pilze / Riesenchampignons — cogumelo portobello",
-     "marcado": true,
-     "obs": "O portobello é o champignon marrom grande. \"Riesenchampignons\" também servem, mesmo se forem brancos.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Pilzhof Nettetal Portobello-Pilze 2 Stück",
-       "url": "https://shop.rewe.de/p/pilzhof-nettetal-portobello-pilze-2-stueck/8839341"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Riesenchampignons ca. 200g",
-       "url": "https://shop.rewe.de/p/riesenchampignons/479349"
-      }
-     ],
-     "pt": "cogumelo portobello",
-     "qtd": "150 g",
-     "slug": "cogumelo-portobello"
-    },
-    {
      "de": "Limetten",
      "foto": "fotos/limao.jpg",
      "id": "Limetten — limão (opcional)",
-     "marcado": false,
+     "marcado": true,
      "obs": "O limão taiti é a \"Limette\" (verde); a \"Zitrone\" é o limão-siciliano (amarelo).",
      "opcional": true,
      "produtos": [
@@ -298,62 +216,6 @@
      "pt": "salsinha",
      "qtd": "",
      "slug": "salsinha"
-    },
-    {
-     "de": "Basilikum",
-     "foto": "fotos/manjericao.jpg",
-     "id": "Basilikum — manjericão",
-     "marcado": true,
-     "obs": "Fresco, em vaso, na seção de ervas.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Basilikum im Topf",
-       "url": "https://www.rewe.de/shop/p/basilikum-im-topf/1045887"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "REWE Bio Basilikum im Topf",
-       "url": "https://www.rewe.de/shop/p/rewe-bio-basilikum-im-topf/1045916"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Bio Kräuter Basilikum XL im Topf",
-       "url": "https://www.rewe.de/shop/p/bio-kraeuter-basilikum-xl-im-topf/8363134"
-      }
-     ],
-     "pt": "manjericão",
-     "qtd": "",
-     "slug": "manjericao"
-    },
-    {
-     "de": "Thymian",
-     "foto": "fotos/tomilho.jpg",
-     "id": "Thymian — tomilho",
-     "marcado": true,
-     "obs": "Fresco, em vaso ou maço, na seção de ervas.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Thymian im Topf",
-       "url": "https://www.rewe.de/shop/p/thymian-im-topf/1045897"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Thymian im Bund aus der Region 15g",
-       "url": "https://www.rewe.de/shop/p/thymian-im-bund-aus-der-region-15g/2544582"
-      }
-     ],
-     "pt": "tomilho",
-     "qtd": "2 galho(s)",
-     "slug": "tomilho"
     }
    ],
    "pt": "ervas frescas"
@@ -422,68 +284,6 @@
      "pt": "coalhada fresca",
      "qtd": "",
      "slug": "coalhada-fresca"
-    },
-    {
-     "de": "Butter",
-     "foto": null,
-     "id": "Butter — manteiga",
-     "marcado": true,
-     "obs": "Prefira \"Süßrahmbutter\", a mais neutra; \"Mildgesäuerte Butter\" é levemente ácida. Evite \"Kräuterbutter\", que é manteiga de ervas. A Sachsenmilch hoje vem na embalagem \"Unsere Butter streich fein\", como na foto.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/manteiga-1.jpg",
-       "loja": "REWE",
-       "nome": "Thüringer Land Deutsche Markenbutter 250g",
-       "url": "https://www.rewe.de/shop/p/thueringer-land-deutsche-markenbutter-250g/4003713"
-      },
-      {
-       "foto": "fotos/manteiga-2.jpg",
-       "loja": "REWE",
-       "nome": "Sachsenmilch Deutsche Markenbutter 250g",
-       "url": "https://shop.rewe.de/p/sachsenmilch-deutsche-markenbutter-250g/9537635"
-      },
-      {
-       "foto": "fotos/manteiga-3.jpg",
-       "loja": "REWE",
-       "nome": "Deutsche Markenbutter Mildgesäuerte Butter 250g",
-       "url": "https://www.rewe.de/shop/p/deutsche-markenbutter-mildgesaeuerte-butter-250g/9558571"
-      }
-     ],
-     "pt": "manteiga",
-     "qtd": "50 g",
-     "slug": "manteiga"
-    },
-    {
-     "de": "Parmesan / Grana Padano",
-     "foto": null,
-     "id": "Parmesan / Grana Padano — parmesão (opcional)",
-     "marcado": false,
-     "obs": "Compre em pedaço, \"am Stück\", e rale na hora; evite \"gerieben\", já ralado. O Parmigiano \"am Stück\" do balcão de queijos é cortado na hora, sem embalagem.",
-     "opcional": true,
-     "produtos": [
-      {
-       "foto": "fotos/parmesao-1.jpg",
-       "loja": "REWE",
-       "nome": "Marca Italia Parmigiano Reggiano 200g",
-       "url": "https://www.rewe.de/shop/p/marca-italia-parmigiano-reggiano-200g/8253459"
-      },
-      {
-       "foto": "fotos/parmesao-2.jpg",
-       "loja": "REWE",
-       "nome": "Marca Italia Parmigiano Reggiano Italienischer Hartkäse am Stück",
-       "url": "https://www.rewe.de/shop/p/marca-italia-parmigiano-reggiano-italienischer-hartkaese-am-stueck/3856445"
-      },
-      {
-       "foto": "fotos/parmesao-3.jpg",
-       "loja": "REWE",
-       "nome": "Marca Italia Grana Padano 200g",
-       "url": "https://shop.rewe.de/p/marca-italia-grana-padano-16-monate-200g/8249232"
-      }
-     ],
-     "pt": "parmesão",
-     "qtd": "",
-     "slug": "parmesao"
     }
    ],
    "pt": "refrigerados (leite, queijo, ovos)"
@@ -521,31 +321,6 @@
      "pt": "arroz",
      "qtd": "320 g",
      "slug": "arroz"
-    },
-    {
-     "de": "Maisgrieß / Polenta",
-     "foto": null,
-     "id": "Maisgrieß / Polenta — fubá",
-     "marcado": true,
-     "obs": "Fubá é \"Maisgrieß\" ou \"Polenta\". Evite \"Minuten-Polenta\" e \"2-Minuten-Polenta\", que são pré-cozidas.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/fuba-1.jpg",
-       "loja": "REWE",
-       "nome": "Davert Bio Maisgrieß für Polenta 500g",
-       "url": "https://shop.rewe.de/p/davert-bio-maisgriess-fuer-polenta-500g/8757933"
-      },
-      {
-       "foto": "fotos/fuba-2.jpg",
-       "loja": "REWE",
-       "nome": "Rinatura Bio Maisgrieß 500g",
-       "url": "https://shop.rewe.de/p/rinatura-bio-maisgriess-500g/6089062"
-      }
-     ],
-     "pt": "fubá",
-     "qtd": "150 g",
-     "slug": "fuba"
     }
    ],
    "pt": "massas, arroz e leguminosas"
@@ -557,7 +332,7 @@
      "de": "Grüne Oliven mit Stein (Glas)",
      "foto": null,
      "id": "Grüne Oliven mit Stein (Glas) — azeitonas verdes",
-     "marcado": false,
+     "marcado": true,
      "obs": "As Manzanilla com caroço são as mais parecidas com a azeitona verde de vidro do Brasil.",
      "opcional": false,
      "produtos": [
@@ -583,31 +358,6 @@
      "pt": "azeitonas verdes",
      "qtd": "1 xícara",
      "slug": "azeitonas-verdes"
-    },
-    {
-     "de": "Tomaten geschält (Dose)",
-     "foto": null,
-     "id": "Tomaten geschält (Dose) — tomate pelado em lata",
-     "marcado": true,
-     "obs": "Tomate pelado inteiro é \"ganze Tomaten geschält\"; \"stückige Tomaten\" é picado em pedaços e também serve. Evite as versões \"mit Kräutern\" ou \"mit Basilikum\", já temperadas.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/tomate-pelado-em-lata-1.jpg",
-       "loja": "REWE",
-       "nome": "Delverde Ganze Tomaten geschält 400g",
-       "url": "https://www.rewe.de/shop/p/delverde-ganze-tomaten-geschaelt-400g/9608519"
-      },
-      {
-       "foto": "fotos/tomate-pelado-em-lata-2.jpg",
-       "loja": "REWE",
-       "nome": "Biozentrale Bio Tomaten geschält 400g",
-       "url": "https://shop.rewe.de/p/biozentrale-bio-tomaten-geschaelt-400g/912896"
-      }
-     ],
-     "pt": "tomate pelado em lata",
-     "qtd": "240 g",
-     "slug": "tomate-pelado-em-lata"
     },
     {
      "de": "Tomatenmark",
@@ -674,7 +424,7 @@
       }
      ],
      "pt": "azeite de oliva",
-     "qtd": "2 c/sopa + 4-6 c/sopa",
+     "qtd": "2 c/sopa",
      "slug": "azeite-de-oliva"
     },
     {
@@ -742,7 +492,7 @@
       }
      ],
      "pt": "folhas de louro",
-     "qtd": "1-2 + 2",
+     "qtd": "2",
      "slug": "folhas-de-louro"
     },
     {
@@ -792,7 +542,7 @@
       }
      ],
      "pt": "sal",
-     "qtd": "1¼ c/chá",
+     "qtd": "¼ c/chá",
      "slug": "sal"
     },
     {
@@ -918,93 +668,6 @@
      "pt": "cominho em pó",
      "qtd": "1 c/chá",
      "slug": "cominho-em-po"
-    },
-    {
-     "de": "Pfeffer schwarz (gemahlen)",
-     "foto": null,
-     "id": "Pfeffer schwarz (gemahlen) — pimenta-do-reino (opcional)",
-     "marcado": true,
-     "obs": "A foto da Ostmann é do saquinho; o produto listado no Netto é o pote com tampa dosadora (\"Streuer\").",
-     "opcional": true,
-     "produtos": [
-      {
-       "foto": "fotos/pimenta-do-reino-1.jpg",
-       "loja": "REWE",
-       "nome": "ja! Schwarzer Pfeffer gemahlen 50g",
-       "url": "https://www.rewe.de/shop/p/ja-schwarzer-pfeffer-gemahlen-50g/2369956"
-      },
-      {
-       "foto": "fotos/pimenta-do-reino-2.jpg",
-       "loja": "Netto",
-       "nome": "Ostmann Pfeffer schwarz gemahlen Streuer 40g",
-       "url": "https://www.netto-online.de/ostmann-pfeffer-schwarz-gemahlen-streuer-40-g-4er-pack/p-1991821000"
-      }
-     ],
-     "pt": "pimenta-do-reino",
-     "qtd": "",
-     "slug": "pimenta-do-reino-2"
-    },
-    {
-     "de": "Chiliflocken",
-     "foto": null,
-     "id": "Chiliflocken — pimenta calabresa em flocos (opcional)",
-     "marcado": true,
-     "obs": "",
-     "opcional": true,
-     "produtos": [
-      {
-       "foto": "fotos/pimenta-calabresa-em-flocos-1.jpg",
-       "loja": "REWE",
-       "nome": "ja! Chiliflocken 35g",
-       "url": "https://shop.rewe.de/p/ja-chiliflocken-35g/7895170"
-      },
-      {
-       "foto": "fotos/pimenta-calabresa-em-flocos-2.jpg",
-       "loja": "REWE",
-       "nome": "REWE Beste Wahl Chiliflocken geschrotet 26g",
-       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-chiliflocken-geschrotet-26g/8333001"
-      },
-      {
-       "foto": "fotos/pimenta-calabresa-em-flocos-3.jpg",
-       "loja": "REWE",
-       "nome": "Fuchs Chili Flocken 50g",
-       "url": "https://shop.rewe.de/p/fuchs-chili-flocken-50g/8990834"
-      }
-     ],
-     "pt": "pimenta calabresa em flocos",
-     "qtd": "",
-     "slug": "pimenta-calabresa-em-flocos-2"
-    },
-    {
-     "de": "Zimtstangen",
-     "foto": null,
-     "id": "Zimtstangen — canela em pau (opcional)",
-     "marcado": false,
-     "obs": "Evite \"Zimt gemahlen\", canela em pó. Sem \"Ceylon\" no nome, geralmente é cássia, mais forte.",
-     "opcional": true,
-     "produtos": [
-      {
-       "foto": "fotos/canela-em-pau-1.jpg",
-       "loja": "REWE",
-       "nome": "Edora Zimt-Stangen Ceylon-Zimt 5 Stück",
-       "url": "https://shop.rewe.de/p/edora-zimt-stangen-ceylon-zimt-5-stueck/604479"
-      },
-      {
-       "foto": "fotos/canela-em-pau-2.jpg",
-       "loja": "REWE",
-       "nome": "Fuchs Zimtstangen Ceylon ganz 3 Stück",
-       "url": "https://www.rewe.de/shop/p/fuchs-zimtstangen-ceylon-ganz-3-stueck/8989382"
-      },
-      {
-       "foto": "fotos/canela-em-pau-3.jpg",
-       "loja": "REWE",
-       "nome": "Hartkorn Stangenzimt Ceylon-Canehl 3 Stück",
-       "url": "https://shop.rewe.de/p/hartkorn-stangenzimt-ceylon-canehl-3-stueck/1940773"
-      }
-     ],
-     "pt": "canela em pau",
-     "qtd": "",
-     "slug": "canela-em-pau"
     }
    ],
    "pt": "temperos"
