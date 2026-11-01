@@ -1,36 +1,11 @@
 {
  "receitas": [
-  "Polenta com Ragu de Cogumelos",
-  "Arroz com Linguiça"
+  "Polenta com Ragu de Cogumelos"
  ],
  "secoes": [
   {
    "de": "Obst & Gemüse",
    "itens": [
-    {
-     "de": "Snackpaprika",
-     "foto": "fotos/pimenta-de-cheiro.jpg",
-     "id": "Snackpaprika — pimenta de cheiro",
-     "obs": "Não existe na Alemanha. O substituto é a \"Snackpaprika\": parecida no aroma e não arde.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "REWE Bio Snackpaprika 200g",
-       "url": "https://www.rewe.de/shop/p/rewe-bio-snackpaprika-200g/9554594"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "REWE Bio Paprika Mix Mini 150g",
-       "url": "https://shop.rewe.de/p/rewe-bio-paprika-mix-mini-150g/2331708"
-      }
-     ],
-     "pt": "pimenta de cheiro",
-     "qtd": "1",
-     "slug": "pimenta-de-cheiro"
-    },
     {
      "de": "Knoblauch",
      "foto": "fotos/alho.jpg",
@@ -52,7 +27,7 @@
       }
      ],
      "pt": "alho",
-     "qtd": "3 dente(s)",
+     "qtd": "1 dente(s)",
      "slug": "alho"
     },
     {
@@ -82,68 +57,8 @@
       }
      ],
      "pt": "cebola",
-     "qtd": "3",
-     "slug": "cebola"
-    },
-    {
-     "de": "Tomaten",
-     "foto": "fotos/tomate.jpg",
-     "id": "Tomaten — tomate",
-     "obs": "",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "REWE Beste Wahl Rispentomaten 650g",
-       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-rispentomaten-650g/1041188"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Strauchtomaten aus der Region",
-       "url": "https://www.rewe.de/shop/p/strauchtomaten-aus-der-region/7169743"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Rispentomaten ca. 100g",
-       "url": "https://www.rewe.de/shop/p/rispentomaten-ca-100g/475360"
-      }
-     ],
-     "pt": "tomate",
-     "qtd": "2",
-     "slug": "tomate"
-    },
-    {
-     "de": "Paprika rot",
-     "foto": "fotos/pimentao-vermelho.jpg",
-     "id": "Paprika rot — pimentão vermelho",
-     "obs": "Spitzpaprika é o pimentão vermelho comprido, mais doce. Também serve.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Paprika rot 500g",
-       "url": "https://www.rewe.de/shop/p/paprika-rot-500g/1902921"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Spitzpaprika rot 500g",
-       "url": "https://www.rewe.de/shop/p/spitzpaprika-rot-500g/2212948"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Paprika Mix 500g",
-       "url": "https://www.rewe.de/shop/p/paprika-mix-500g/1040657"
-      }
-     ],
-     "pt": "pimentão vermelho",
      "qtd": "1",
-     "slug": "pimentao-vermelho"
+     "slug": "cebola"
     },
     {
      "de": "Zucchini",
@@ -222,36 +137,6 @@
      "pt": "cogumelo portobello",
      "qtd": "150 g",
      "slug": "cogumelo-portobello"
-    },
-    {
-     "de": "Limetten",
-     "foto": "fotos/limao.jpg",
-     "id": "Limetten — limão (opcional)",
-     "obs": "O limão taiti é a \"Limette\" (verde); a \"Zitrone\" é o limão-siciliano (amarelo).",
-     "opcional": true,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "REWE Beste Wahl Limetten 4 Stück",
-       "url": "https://shop.rewe.de/p/rewe-beste-wahl-limetten-4-stueck/1316461"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Zitronen 500g im Netz",
-       "url": "https://shop.rewe.de/p/zitronen-500g-netz/1073678"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "REWE Bio Zitrone 500g im Netz",
-       "url": "https://shop.rewe.de/p/rewe-bio-zitrone-500g-netz/7589883"
-      }
-     ],
-     "pt": "limão",
-     "qtd": "",
-     "slug": "limao"
     }
    ],
    "pt": "hortifruti"
@@ -259,36 +144,6 @@
   {
    "de": "Frische Kräuter",
    "itens": [
-    {
-     "de": "Petersilie (glatt)",
-     "foto": "fotos/salsinha.jpg",
-     "id": "Petersilie (glatt) — salsinha",
-     "obs": "Compre a \"glatte\" (lisa), não a \"krause\" (crespa).",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Glatte Petersilie im Bund aus der Region",
-       "url": "https://www.rewe.de/shop/p/glatte-petersilie-im-bund-aus-der-region/1923402"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Petersilie glatt im Topf aus der Region",
-       "url": "https://shop.rewe.de/p/petersilie-glatt-im-topf-aus-der-region-1-stueck/8383136"
-      },
-      {
-       "foto": null,
-       "loja": "REWE",
-       "nome": "Glatte Petersilie 30g",
-       "url": "https://www.rewe.de/shop/p/glatte-petersilie-30g/1045885"
-      }
-     ],
-     "pt": "salsinha",
-     "qtd": "",
-     "slug": "salsinha"
-    },
     {
      "de": "Basilikum",
      "foto": "fotos/manjericao.jpg",
@@ -347,68 +202,8 @@
    "pt": "ervas frescas"
   },
   {
-   "de": "Fleisch & Fisch (Kühltheke)",
-   "itens": [
-    {
-     "de": "Salsiccia / grobe Bratwurst",
-     "foto": null,
-     "id": "Salsiccia / grobe Bratwurst — linguiça fresca",
-     "obs": "A \"Salsiccia Classica\" do REWE (crua, 94% porco) é a mais parecida com a linguiça toscana. Também serve \"grobe Bratwurst\" crua. A R&S é vendida solta no balcão de carnes, sem embalagem.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/linguica-fresca-1.jpg",
-       "loja": "REWE",
-       "nome": "REWE Feine Welt Salsiccia Fenchel 300g",
-       "url": "https://shop.rewe.de/p/rewe-feine-welt-salsiccia-fenchel-300g/8298740"
-      },
-      {
-       "foto": "fotos/linguica-fresca-2.jpg",
-       "loja": "REWE",
-       "nome": "REWE Feine Welt Salsiccia Classica 300g",
-       "url": "https://shop.rewe.de/p/rewe-feine-welt-salsiccia-classica-300g/8288229"
-      },
-      {
-       "foto": "fotos/linguica-fresca-3.jpg",
-       "loja": "REWE",
-       "nome": "R&S Salsiccia Natur",
-       "url": "https://shop.rewe.de/p/r-s-salsiccia-natur/2794774"
-      }
-     ],
-     "pt": "linguiça fresca",
-     "qtd": "300 g",
-     "slug": "linguica-fresca"
-    }
-   ],
-   "pt": "carnes e peixes (refrigerados)"
-  },
-  {
    "de": "Kühlregal (Milch, Käse, Eier)",
    "itens": [
-    {
-     "de": "Griechischer Joghurt 10% / Labneh",
-     "foto": null,
-     "id": "Griechischer Joghurt 10% / Labneh — coalhada fresca",
-     "obs": "Não há Labneh no REWE nem no Netto. O iogurte grego 10% escorrido uma noite num pano vira uma coalhada mais firme. Mercados turcos e árabes costumam ter Labneh.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/coalhada-fresca-1.jpg",
-       "loja": "REWE",
-       "nome": "ja! Sahnejoghurt nach griechischer Art 1kg",
-       "url": "https://www.rewe.de/shop/p/ja-sahnejoghurt-nach-griechischer-art-1kg/8271521"
-      },
-      {
-       "foto": "fotos/coalhada-fresca-2.jpg",
-       "loja": "REWE",
-       "nome": "REWE Bio Sahnejoghurt nach griechischer Art 500g",
-       "url": "https://www.rewe.de/shop/p/rewe-bio-sahnejoghurt-nach-griechischer-art-500g/7710425"
-      }
-     ],
-     "pt": "coalhada fresca",
-     "qtd": "",
-     "slug": "coalhada-fresca"
-    },
     {
      "de": "Butter",
      "foto": null,
@@ -476,36 +271,6 @@
    "de": "Nudeln, Reis & Hülsenfrüchte",
    "itens": [
     {
-     "de": "Basmatireis / Langkornreis",
-     "foto": null,
-     "id": "Basmatireis / Langkornreis — arroz",
-     "obs": "O Oryza (branco, não parboilizado) é o mais parecido com o agulhinha tipo 1. O ja! é parboilizado.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/arroz-1.jpg",
-       "loja": "REWE",
-       "nome": "Oryza Spitzen-Langkorn-Reis 1kg",
-       "url": "https://shop.rewe.de/p/oryza-spitzen-langkorn-reis-1kg/108820"
-      },
-      {
-       "foto": "fotos/arroz-2.jpg",
-       "loja": "REWE",
-       "nome": "ja! Parboiled Spitzenreis Langkornreis 1kg",
-       "url": "https://www.rewe.de/shop/p/ja-parboiled-spitzenreis-langkornreis-1kg/7227868"
-      },
-      {
-       "foto": "fotos/arroz-3.jpg",
-       "loja": "Netto",
-       "nome": "Bonrisi Langkornreis 1 kg",
-       "url": "https://www.netto-online.de/bonrisi-langkornreis-1-kg-8er-pack/p-2587669000"
-      }
-     ],
-     "pt": "arroz",
-     "qtd": "320 g",
-     "slug": "arroz"
-    },
-    {
      "de": "Maisgrieß / Polenta",
      "foto": null,
      "id": "Maisgrieß / Polenta — fubá",
@@ -536,36 +301,6 @@
    "de": "Konserven",
    "itens": [
     {
-     "de": "Grüne Oliven mit Stein (Glas)",
-     "foto": null,
-     "id": "Grüne Oliven mit Stein (Glas) — azeitonas verdes",
-     "obs": "As Manzanilla com caroço são as mais parecidas com a azeitona verde de vidro do Brasil.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/azeitonas-verdes-1.jpg",
-       "loja": "REWE",
-       "nome": "Feinkost Dittmann Oliva Manzanilla-Oliven grün mit Stein 200g",
-       "url": "https://www.rewe.de/shop/p/feinkost-dittmann-oliva-manzanilla-oliven-gruen-mit-stein-200g/72088"
-      },
-      {
-       "foto": "fotos/azeitonas-verdes-2.jpg",
-       "loja": "REWE",
-       "nome": "Feinkost Dittmann Grüne Oliven mit Stein 125g",
-       "url": "https://www.rewe.de/shop/p/feinkost-dittmann-gruene-oliven-mit-stein-125g/5238463"
-      },
-      {
-       "foto": "fotos/azeitonas-verdes-3.jpg",
-       "loja": "REWE",
-       "nome": "Ibero Grüne Oliven mit Stein 85g",
-       "url": "https://www.rewe.de/shop/p/ibero-gruene-oliven-mit-stein-85g/5736170"
-      }
-     ],
-     "pt": "azeitonas verdes",
-     "qtd": "1 xícara",
-     "slug": "azeitonas-verdes"
-    },
-    {
      "de": "Tomaten geschält (Dose)",
      "foto": null,
      "id": "Tomaten geschält (Dose) — tomate pelado em lata",
@@ -588,36 +323,6 @@
      "pt": "tomate pelado em lata",
      "qtd": "240 g",
      "slug": "tomate-pelado-em-lata"
-    },
-    {
-     "de": "Tomatenmark",
-     "foto": null,
-     "id": "Tomatenmark — extrato de tomate",
-     "obs": "O concentrado 2x (ja!) é o mais parecido com o extrato brasileiro. O 3x é mais forte: use um pouco menos.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/extrato-de-tomate-1.jpg",
-       "loja": "REWE",
-       "nome": "ja! Tomatenmark 70g",
-       "url": "https://shop.rewe.de/p/ja-tomatenmark-70g/8746686"
-      },
-      {
-       "foto": "fotos/extrato-de-tomate-2.jpg",
-       "loja": "REWE",
-       "nome": "Oro di Parma Tomatenmark 3fach konzentriert 200g",
-       "url": "https://shop.rewe.de/p/oro-di-parma-tomatenmark-3fach-konzentriert-200g/439975"
-      },
-      {
-       "foto": "fotos/extrato-de-tomate-3.jpg",
-       "loja": "REWE",
-       "nome": "REWE Bio Tomatenmark 150g",
-       "url": "https://www.rewe.de/shop/p/rewe-bio-tomatenmark-150g/2006169"
-      }
-     ],
-     "pt": "extrato de tomate",
-     "qtd": "1 c/sopa",
-     "slug": "extrato-de-tomate"
     }
    ],
    "pt": "enlatados e conservas"
@@ -652,38 +357,8 @@
       }
      ],
      "pt": "azeite de oliva",
-     "qtd": "2 c/sopa + 4-6 c/sopa",
+     "qtd": "4-6 c/sopa",
      "slug": "azeite-de-oliva"
-    },
-    {
-     "de": "Sonnenblumenöl / Rapsöl",
-     "foto": null,
-     "id": "Sonnenblumenöl / Rapsöl — óleo",
-     "obs": "",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/oleo-1.jpg",
-       "loja": "REWE",
-       "nome": "ja! Sonnenblumenöl 1l",
-       "url": "https://www.rewe.de/shop/p/ja-sonnenblumenoel-1l/6928242"
-      },
-      {
-       "foto": "fotos/oleo-2.jpg",
-       "loja": "REWE",
-       "nome": "ja! Reines Rapsöl 1l",
-       "url": "https://www.rewe.de/shop/p/ja-reines-rapsoel-1l/6801447"
-      },
-      {
-       "foto": "fotos/oleo-3.jpg",
-       "loja": "Netto",
-       "nome": "Thomy Sonnenblumenöl 750ml",
-       "url": "https://www.netto-online.de/thomy-sonnenblumenoel-750-ml-12er-pack/p-2162216000"
-      }
-     ],
-     "pt": "óleo",
-     "qtd": "2-3 c/sopa",
-     "slug": "oleo"
     }
    ],
    "pt": "óleos, vinagres e molhos"
@@ -718,32 +393,8 @@
       }
      ],
      "pt": "folhas de louro",
-     "qtd": "1-2 + 2",
+     "qtd": "1-2",
      "slug": "folhas-de-louro"
-    },
-    {
-     "de": "Annatto / Achiote",
-     "foto": null,
-     "id": "Annatto / Achiote — urucum",
-     "obs": "Não existe no REWE nem no Netto. Substituto: \"Paprika edelsüß\" do REWE. O urucum de verdade só aparece em sementes no marketplace online do Kaufland ou em mercados asiáticos e latinos.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/urucum-1.jpg",
-       "loja": "REWE",
-       "nome": "REWE Beste Wahl Paprika edelsüß gemahlen 50g (substituto)",
-       "url": "https://shop.rewe.de/p/rewe-beste-wahl-paprika-edelsuess-gemahlen-50g/8005928"
-      },
-      {
-       "foto": "fotos/urucum-2.jpg",
-       "loja": "Kaufland",
-       "nome": "AE Lotus Annatto Samen 100g (marketplace online)",
-       "url": "https://www.kaufland.de/product/462038599/"
-      }
-     ],
-     "pt": "urucum",
-     "qtd": "¼ c/chá",
-     "slug": "urucum"
     },
     {
      "de": "Salz / Jodsalz",
@@ -766,128 +417,8 @@
       }
      ],
      "pt": "sal",
-     "qtd": "1¼ c/chá",
+     "qtd": "1 c/chá",
      "slug": "sal"
-    },
-    {
-     "de": "Pfeffer schwarz (gemahlen)",
-     "foto": null,
-     "id": "Pfeffer schwarz (gemahlen) — pimenta-do-reino",
-     "obs": "A foto da Ostmann é do saquinho; o produto listado no Netto é o pote com tampa dosadora (\"Streuer\").",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/pimenta-do-reino-1.jpg",
-       "loja": "REWE",
-       "nome": "ja! Schwarzer Pfeffer gemahlen 50g",
-       "url": "https://www.rewe.de/shop/p/ja-schwarzer-pfeffer-gemahlen-50g/2369956"
-      },
-      {
-       "foto": "fotos/pimenta-do-reino-2.jpg",
-       "loja": "Netto",
-       "nome": "Ostmann Pfeffer schwarz gemahlen Streuer 40g",
-       "url": "https://www.netto-online.de/ostmann-pfeffer-schwarz-gemahlen-streuer-40-g-4er-pack/p-1991821000"
-      }
-     ],
-     "pt": "pimenta-do-reino",
-     "qtd": "",
-     "slug": "pimenta-do-reino"
-    },
-    {
-     "de": "Paprika geräuchert",
-     "foto": null,
-     "id": "Paprika geräuchert — páprica defumada",
-     "obs": "Evite o \"Alarmstufe Rauch\" da Ostmann: é uma mistura com muito sal.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/paprica-defumada-1.jpg",
-       "loja": "REWE",
-       "nome": "Ostmann Paprika geräuchert gemahlen 35g",
-       "url": "https://shop.rewe.de/p/ostmann-paprika-geraeuchert-gemahlen-35g/8101654"
-      },
-      {
-       "foto": "fotos/paprica-defumada-2.jpg",
-       "loja": "REWE",
-       "nome": "Fuchs Paprika geräuchert 60g",
-       "url": "https://shop.rewe.de/p/fuchs-paprika-geraeuchert-60g/9077870"
-      },
-      {
-       "foto": "fotos/paprica-defumada-3.jpg",
-       "loja": "REWE",
-       "nome": "Hartkorn Paprika geräuchert 30g",
-       "url": "https://shop.rewe.de/p/hartkorn-paprika-geraeuchert-30g/7926401"
-      }
-     ],
-     "pt": "páprica defumada",
-     "qtd": "1 c/chá",
-     "slug": "paprica-defumada"
-    },
-    {
-     "de": "Chiliflocken",
-     "foto": null,
-     "id": "Chiliflocken — pimenta calabresa em flocos",
-     "obs": "",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/pimenta-calabresa-em-flocos-1.jpg",
-       "loja": "REWE",
-       "nome": "ja! Chiliflocken 35g",
-       "url": "https://shop.rewe.de/p/ja-chiliflocken-35g/7895170"
-      },
-      {
-       "foto": "fotos/pimenta-calabresa-em-flocos-2.jpg",
-       "loja": "REWE",
-       "nome": "REWE Beste Wahl Chiliflocken geschrotet 26g",
-       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-chiliflocken-geschrotet-26g/8333001"
-      },
-      {
-       "foto": "fotos/pimenta-calabresa-em-flocos-3.jpg",
-       "loja": "REWE",
-       "nome": "Fuchs Chili Flocken 50g",
-       "url": "https://shop.rewe.de/p/fuchs-chili-flocken-50g/8990834"
-      }
-     ],
-     "pt": "pimenta calabresa em flocos",
-     "qtd": "¼ c/chá",
-     "slug": "pimenta-calabresa-em-flocos"
-    },
-    {
-     "de": "Kreuzkümmel (gemahlen)",
-     "foto": null,
-     "id": "Kreuzkümmel (gemahlen) — cominho em pó",
-     "obs": "Cominho é \"Kreuzkümmel\", não \"Kümmel\" (que é alcaravia). O Edora fica no corredor de produtos turcos e rende mais pelo preço.",
-     "opcional": false,
-     "produtos": [
-      {
-       "foto": "fotos/cominho-em-po-1.jpg",
-       "loja": "REWE",
-       "nome": "Hartkorn Kreuzkümmel \"Cumin\" gemahlen 45g",
-       "url": "https://www.rewe.de/shop/p/hartkorn-kreuzkuemmel-cumin-gemahlen-45g/174151"
-      },
-      {
-       "foto": "fotos/cominho-em-po-2.jpg",
-       "loja": "REWE",
-       "nome": "REWE Beste Wahl Kreuzkümmel gemahlen 35g",
-       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-kreuzkuemmel-gemahlen-35g/8413269"
-      },
-      {
-       "foto": "fotos/cominho-em-po-3.jpg",
-       "loja": "REWE",
-       "nome": "Kotányi Kreuzkümmel gemahlen 30g",
-       "url": "https://www.rewe.de/shop/p/kot-nyi-kreuzkuemmel-gemahlen-30g/8230479"
-      },
-      {
-       "foto": "fotos/cominho-em-po-4.jpg",
-       "loja": "REWE",
-       "nome": "Edora Kreuzkümmel gemahlen 80g",
-       "url": "https://www.rewe.de/shop/p/edora-kreuzkuemmel-gemahlen-80g/604468"
-      }
-     ],
-     "pt": "cominho em pó",
-     "qtd": "1 c/chá",
-     "slug": "cominho-em-po"
     },
     {
      "de": "Pfeffer schwarz (gemahlen)",
@@ -911,7 +442,7 @@
      ],
      "pt": "pimenta-do-reino",
      "qtd": "",
-     "slug": "pimenta-do-reino-2"
+     "slug": "pimenta-do-reino"
     },
     {
      "de": "Chiliflocken",
@@ -941,7 +472,7 @@
      ],
      "pt": "pimenta calabresa em flocos",
      "qtd": "",
-     "slug": "pimenta-calabresa-em-flocos-2"
+     "slug": "pimenta-calabresa-em-flocos"
     },
     {
      "de": "Zimtstangen",
