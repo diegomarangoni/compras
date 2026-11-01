@@ -476,6 +476,36 @@
    "de": "Nudeln, Reis & Hülsenfrüchte",
    "itens": [
     {
+     "de": "Basmatireis / Langkornreis",
+     "foto": null,
+     "id": "Basmatireis / Langkornreis — arroz",
+     "obs": "O Oryza (branco, não parboilizado) é o mais parecido com o agulhinha tipo 1. O ja! é parboilizado.",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/arroz-1.jpg",
+       "loja": "REWE",
+       "nome": "Oryza Spitzen-Langkorn-Reis 1kg",
+       "url": "https://shop.rewe.de/p/oryza-spitzen-langkorn-reis-1kg/108820"
+      },
+      {
+       "foto": "fotos/arroz-2.jpg",
+       "loja": "REWE",
+       "nome": "ja! Parboiled Spitzenreis Langkornreis 1kg",
+       "url": "https://www.rewe.de/shop/p/ja-parboiled-spitzenreis-langkornreis-1kg/7227868"
+      },
+      {
+       "foto": "fotos/arroz-3.jpg",
+       "loja": "Netto",
+       "nome": "Bonrisi Langkornreis 1 kg",
+       "url": "https://www.netto-online.de/bonrisi-langkornreis-1-kg-8er-pack/p-2587669000"
+      }
+     ],
+     "pt": "arroz",
+     "qtd": "320 g",
+     "slug": "arroz"
+    },
+    {
      "de": "Maisgrieß / Polenta",
      "foto": null,
      "id": "Maisgrieß / Polenta — fubá",
@@ -506,6 +536,36 @@
    "de": "Konserven",
    "itens": [
     {
+     "de": "Grüne Oliven mit Stein (Glas)",
+     "foto": null,
+     "id": "Grüne Oliven mit Stein (Glas) — azeitonas verdes",
+     "obs": "As Manzanilla com caroço são as mais parecidas com a azeitona verde de vidro do Brasil.",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/azeitonas-verdes-1.jpg",
+       "loja": "REWE",
+       "nome": "Feinkost Dittmann Oliva Manzanilla-Oliven grün mit Stein 200g",
+       "url": "https://www.rewe.de/shop/p/feinkost-dittmann-oliva-manzanilla-oliven-gruen-mit-stein-200g/72088"
+      },
+      {
+       "foto": "fotos/azeitonas-verdes-2.jpg",
+       "loja": "REWE",
+       "nome": "Feinkost Dittmann Grüne Oliven mit Stein 125g",
+       "url": "https://www.rewe.de/shop/p/feinkost-dittmann-gruene-oliven-mit-stein-125g/5238463"
+      },
+      {
+       "foto": "fotos/azeitonas-verdes-3.jpg",
+       "loja": "REWE",
+       "nome": "Ibero Grüne Oliven mit Stein 85g",
+       "url": "https://www.rewe.de/shop/p/ibero-gruene-oliven-mit-stein-85g/5736170"
+      }
+     ],
+     "pt": "azeitonas verdes",
+     "qtd": "1 xícara",
+     "slug": "azeitonas-verdes"
+    },
+    {
      "de": "Tomaten geschält (Dose)",
      "foto": null,
      "id": "Tomaten geschält (Dose) — tomate pelado em lata",
@@ -528,13 +588,139 @@
      "pt": "tomate pelado em lata",
      "qtd": "240 g",
      "slug": "tomate-pelado-em-lata"
+    },
+    {
+     "de": "Tomatenmark",
+     "foto": null,
+     "id": "Tomatenmark — extrato de tomate",
+     "obs": "O concentrado 2x (ja!) é o mais parecido com o extrato brasileiro. O 3x é mais forte: use um pouco menos.",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/extrato-de-tomate-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Tomatenmark 70g",
+       "url": "https://shop.rewe.de/p/ja-tomatenmark-70g/8746686"
+      },
+      {
+       "foto": "fotos/extrato-de-tomate-2.jpg",
+       "loja": "REWE",
+       "nome": "Oro di Parma Tomatenmark 3fach konzentriert 200g",
+       "url": "https://shop.rewe.de/p/oro-di-parma-tomatenmark-3fach-konzentriert-200g/439975"
+      },
+      {
+       "foto": "fotos/extrato-de-tomate-3.jpg",
+       "loja": "REWE",
+       "nome": "REWE Bio Tomatenmark 150g",
+       "url": "https://www.rewe.de/shop/p/rewe-bio-tomatenmark-150g/2006169"
+      }
+     ],
+     "pt": "extrato de tomate",
+     "qtd": "1 c/sopa",
+     "slug": "extrato-de-tomate"
     }
    ],
    "pt": "enlatados e conservas"
   },
   {
+   "de": "Öl, Essig & Saucen",
+   "itens": [
+    {
+     "de": "Olivenöl",
+     "foto": null,
+     "id": "Olivenöl — azeite de oliva",
+     "obs": "O ja! é o mais barato. O Lakudia (grego) é uma boa opção de marca.",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/azeite-de-oliva-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Natives Olivenöl extra 750ml",
+       "url": "https://www.rewe.de/shop/p/ja-natives-olivenoel-extra-750ml/420386"
+      },
+      {
+       "foto": "fotos/azeite-de-oliva-2.jpg",
+       "loja": "REWE",
+       "nome": "REWE Beste Wahl Italienisches Natives Olivenöl 500ml",
+       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-italienisches-natives-olivenoel-500ml/8425181"
+      },
+      {
+       "foto": "fotos/azeite-de-oliva-3.jpg",
+       "loja": "REWE",
+       "nome": "Lakudia Natives Olivenöl Extra 1l",
+       "url": "https://www.rewe.de/shop/p/lakudia-natives-olivenoel-extra-1l/682908"
+      }
+     ],
+     "pt": "azeite de oliva",
+     "qtd": "2 c/sopa + 4-6 c/sopa",
+     "slug": "azeite-de-oliva"
+    },
+    {
+     "de": "Sonnenblumenöl / Rapsöl",
+     "foto": null,
+     "id": "Sonnenblumenöl / Rapsöl — óleo",
+     "obs": "",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/oleo-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Sonnenblumenöl 1l",
+       "url": "https://www.rewe.de/shop/p/ja-sonnenblumenoel-1l/6928242"
+      },
+      {
+       "foto": "fotos/oleo-2.jpg",
+       "loja": "REWE",
+       "nome": "ja! Reines Rapsöl 1l",
+       "url": "https://www.rewe.de/shop/p/ja-reines-rapsoel-1l/6801447"
+      },
+      {
+       "foto": "fotos/oleo-3.jpg",
+       "loja": "Netto",
+       "nome": "Thomy Sonnenblumenöl 750ml",
+       "url": "https://www.netto-online.de/thomy-sonnenblumenoel-750-ml-12er-pack/p-2162216000"
+      }
+     ],
+     "pt": "óleo",
+     "qtd": "2-3 c/sopa",
+     "slug": "oleo"
+    }
+   ],
+   "pt": "óleos, vinagres e molhos"
+  },
+  {
    "de": "Gewürze",
    "itens": [
+    {
+     "de": "Lorbeerblätter",
+     "foto": null,
+     "id": "Lorbeerblätter — folhas de louro",
+     "obs": "Folhas secas inteiras, iguais às do Brasil.",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/folhas-de-louro-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Lorbeerblätter ganz 7g",
+       "url": "https://shop.rewe.de/p/ja-lorbeerblaetter-ganz-7g/8006766"
+      },
+      {
+       "foto": "fotos/folhas-de-louro-2.jpg",
+       "loja": "REWE",
+       "nome": "ja! Lorbeerblätter ganz 14g",
+       "url": "https://shop.rewe.de/p/ja-lorbeerblaetter-ganz-14g/8785080"
+      },
+      {
+       "foto": "fotos/folhas-de-louro-3.jpg",
+       "loja": "REWE",
+       "nome": "Ostmann Lorbeerblätter 5g",
+       "url": "https://shop.rewe.de/p/ostmann-lorbeerblaetter-5g/4548191"
+      }
+     ],
+     "pt": "folhas de louro",
+     "qtd": "1-2 + 2",
+     "slug": "folhas-de-louro"
+    },
     {
      "de": "Annatto / Achiote",
      "foto": null,
@@ -560,6 +746,150 @@
      "slug": "urucum"
     },
     {
+     "de": "Salz / Jodsalz",
+     "foto": null,
+     "id": "Salz / Jodsalz — sal",
+     "obs": "A foto é do \"Marken-Jodsalz\" da Bad Reichenhaller; o produto listado é a versão \"mit Fluorid + Folsäure\", com embalagem parecida.",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/sal-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Jodsalz 500g",
+       "url": "https://www.rewe.de/shop/p/ja-jodsalz-500g/2037971"
+      },
+      {
+       "foto": "fotos/sal-2.jpg",
+       "loja": "Netto",
+       "nome": "Bad Reichenhaller Jodsalz Fluorid + Folsäure 500g",
+       "url": "https://www.netto-online.de/bad-reichenhaller-jodsalz-fluorid-folsaeure-500-g-24-er-pack/p-1991798000"
+      }
+     ],
+     "pt": "sal",
+     "qtd": "1¼ c/chá",
+     "slug": "sal"
+    },
+    {
+     "de": "Pfeffer schwarz (gemahlen)",
+     "foto": null,
+     "id": "Pfeffer schwarz (gemahlen) — pimenta-do-reino",
+     "obs": "A foto da Ostmann é do saquinho; o produto listado no Netto é o pote com tampa dosadora (\"Streuer\").",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/pimenta-do-reino-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Schwarzer Pfeffer gemahlen 50g",
+       "url": "https://www.rewe.de/shop/p/ja-schwarzer-pfeffer-gemahlen-50g/2369956"
+      },
+      {
+       "foto": "fotos/pimenta-do-reino-2.jpg",
+       "loja": "Netto",
+       "nome": "Ostmann Pfeffer schwarz gemahlen Streuer 40g",
+       "url": "https://www.netto-online.de/ostmann-pfeffer-schwarz-gemahlen-streuer-40-g-4er-pack/p-1991821000"
+      }
+     ],
+     "pt": "pimenta-do-reino",
+     "qtd": "",
+     "slug": "pimenta-do-reino"
+    },
+    {
+     "de": "Paprika geräuchert",
+     "foto": null,
+     "id": "Paprika geräuchert — páprica defumada",
+     "obs": "Evite o \"Alarmstufe Rauch\" da Ostmann: é uma mistura com muito sal.",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/paprica-defumada-1.jpg",
+       "loja": "REWE",
+       "nome": "Ostmann Paprika geräuchert gemahlen 35g",
+       "url": "https://shop.rewe.de/p/ostmann-paprika-geraeuchert-gemahlen-35g/8101654"
+      },
+      {
+       "foto": "fotos/paprica-defumada-2.jpg",
+       "loja": "REWE",
+       "nome": "Fuchs Paprika geräuchert 60g",
+       "url": "https://shop.rewe.de/p/fuchs-paprika-geraeuchert-60g/9077870"
+      },
+      {
+       "foto": "fotos/paprica-defumada-3.jpg",
+       "loja": "REWE",
+       "nome": "Hartkorn Paprika geräuchert 30g",
+       "url": "https://shop.rewe.de/p/hartkorn-paprika-geraeuchert-30g/7926401"
+      }
+     ],
+     "pt": "páprica defumada",
+     "qtd": "1 c/chá",
+     "slug": "paprica-defumada"
+    },
+    {
+     "de": "Chiliflocken",
+     "foto": null,
+     "id": "Chiliflocken — pimenta calabresa em flocos",
+     "obs": "",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/pimenta-calabresa-em-flocos-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Chiliflocken 35g",
+       "url": "https://shop.rewe.de/p/ja-chiliflocken-35g/7895170"
+      },
+      {
+       "foto": "fotos/pimenta-calabresa-em-flocos-2.jpg",
+       "loja": "REWE",
+       "nome": "REWE Beste Wahl Chiliflocken geschrotet 26g",
+       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-chiliflocken-geschrotet-26g/8333001"
+      },
+      {
+       "foto": "fotos/pimenta-calabresa-em-flocos-3.jpg",
+       "loja": "REWE",
+       "nome": "Fuchs Chili Flocken 50g",
+       "url": "https://shop.rewe.de/p/fuchs-chili-flocken-50g/8990834"
+      }
+     ],
+     "pt": "pimenta calabresa em flocos",
+     "qtd": "¼ c/chá",
+     "slug": "pimenta-calabresa-em-flocos"
+    },
+    {
+     "de": "Kreuzkümmel (gemahlen)",
+     "foto": null,
+     "id": "Kreuzkümmel (gemahlen) — cominho em pó",
+     "obs": "Cominho é \"Kreuzkümmel\", não \"Kümmel\" (que é alcaravia). O Edora fica no corredor de produtos turcos e rende mais pelo preço.",
+     "opcional": false,
+     "produtos": [
+      {
+       "foto": "fotos/cominho-em-po-1.jpg",
+       "loja": "REWE",
+       "nome": "Hartkorn Kreuzkümmel \"Cumin\" gemahlen 45g",
+       "url": "https://www.rewe.de/shop/p/hartkorn-kreuzkuemmel-cumin-gemahlen-45g/174151"
+      },
+      {
+       "foto": "fotos/cominho-em-po-2.jpg",
+       "loja": "REWE",
+       "nome": "REWE Beste Wahl Kreuzkümmel gemahlen 35g",
+       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-kreuzkuemmel-gemahlen-35g/8413269"
+      },
+      {
+       "foto": "fotos/cominho-em-po-3.jpg",
+       "loja": "REWE",
+       "nome": "Kotányi Kreuzkümmel gemahlen 30g",
+       "url": "https://www.rewe.de/shop/p/kot-nyi-kreuzkuemmel-gemahlen-30g/8230479"
+      },
+      {
+       "foto": "fotos/cominho-em-po-4.jpg",
+       "loja": "REWE",
+       "nome": "Edora Kreuzkümmel gemahlen 80g",
+       "url": "https://www.rewe.de/shop/p/edora-kreuzkuemmel-gemahlen-80g/604468"
+      }
+     ],
+     "pt": "cominho em pó",
+     "qtd": "1 c/chá",
+     "slug": "cominho-em-po"
+    },
+    {
      "de": "Pfeffer schwarz (gemahlen)",
      "foto": null,
      "id": "Pfeffer schwarz (gemahlen) — pimenta-do-reino (opcional)",
@@ -581,7 +911,7 @@
      ],
      "pt": "pimenta-do-reino",
      "qtd": "",
-     "slug": "pimenta-do-reino"
+     "slug": "pimenta-do-reino-2"
     },
     {
      "de": "Chiliflocken",
@@ -611,7 +941,7 @@
      ],
      "pt": "pimenta calabresa em flocos",
      "qtd": "",
-     "slug": "pimenta-calabresa-em-flocos"
+     "slug": "pimenta-calabresa-em-flocos-2"
     },
     {
      "de": "Zimtstangen",
