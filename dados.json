@@ -214,6 +214,35 @@
      "pt": "cogumelo portobello",
      "qtd": "150 g",
      "slug": "cogumelo-portobello"
+    },
+    {
+     "de": "Limetten",
+     "foto": "fotos/limao.jpg",
+     "id": "Limetten — limão (opcional)",
+     "obs": "O limão taiti é a \"Limette\" (verde); a \"Zitrone\" é o limão-siciliano (amarelo).",
+     "produtos": [
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Beste Wahl Limetten 4 Stück",
+       "url": "https://shop.rewe.de/p/rewe-beste-wahl-limetten-4-stueck/1316461"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "Zitronen 500g im Netz",
+       "url": "https://shop.rewe.de/p/zitronen-500g-netz/1073678"
+      },
+      {
+       "foto": null,
+       "loja": "REWE",
+       "nome": "REWE Bio Zitrone 500g im Netz",
+       "url": "https://shop.rewe.de/p/rewe-bio-zitrone-500g-netz/7589883"
+      }
+     ],
+     "pt": "limão",
+     "qtd": "opcional",
+     "slug": "limao"
     }
    ],
    "pt": "hortifruti"
@@ -394,6 +423,35 @@
      "pt": "manteiga",
      "qtd": "50 g",
      "slug": "manteiga"
+    },
+    {
+     "de": "Parmesan / Grana Padano",
+     "foto": null,
+     "id": "Parmesan / Grana Padano — parmesão (opcional)",
+     "obs": "Compre em pedaço, \"am Stück\", e rale na hora; evite \"gerieben\", já ralado. O Parmigiano \"am Stück\" do balcão de queijos é cortado na hora, sem embalagem.",
+     "produtos": [
+      {
+       "foto": "fotos/parmesao-1.jpg",
+       "loja": "REWE",
+       "nome": "Marca Italia Parmigiano Reggiano 200g",
+       "url": "https://www.rewe.de/shop/p/marca-italia-parmigiano-reggiano-200g/8253459"
+      },
+      {
+       "foto": "fotos/parmesao-2.jpg",
+       "loja": "REWE",
+       "nome": "Marca Italia Parmigiano Reggiano Italienischer Hartkäse am Stück",
+       "url": "https://www.rewe.de/shop/p/marca-italia-parmigiano-reggiano-italienischer-hartkaese-am-stueck/3856445"
+      },
+      {
+       "foto": "fotos/parmesao-3.jpg",
+       "loja": "REWE",
+       "nome": "Marca Italia Grana Padano 200g",
+       "url": "https://shop.rewe.de/p/marca-italia-grana-padano-16-monate-200g/8249232"
+      }
+     ],
+     "pt": "parmesão",
+     "qtd": "opcional",
+     "slug": "parmesao"
     }
    ],
    "pt": "refrigerados (leite, queijo, ovos)"
@@ -479,8 +537,89 @@
       }
      ],
      "pt": "urucum",
-     "qtd": "¼ c. chá",
+     "qtd": "¼ c/chá",
      "slug": "urucum"
+    },
+    {
+     "de": "Pfeffer schwarz (gemahlen)",
+     "foto": null,
+     "id": "Pfeffer schwarz (gemahlen) — pimenta-do-reino (opcional)",
+     "obs": "A foto da Ostmann é do saquinho; o produto listado no Netto é o pote com tampa dosadora (\"Streuer\").",
+     "produtos": [
+      {
+       "foto": "fotos/pimenta-do-reino-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Schwarzer Pfeffer gemahlen 50g",
+       "url": "https://www.rewe.de/shop/p/ja-schwarzer-pfeffer-gemahlen-50g/2369956"
+      },
+      {
+       "foto": "fotos/pimenta-do-reino-2.jpg",
+       "loja": "Netto",
+       "nome": "Ostmann Pfeffer schwarz gemahlen Streuer 40g",
+       "url": "https://www.netto-online.de/ostmann-pfeffer-schwarz-gemahlen-streuer-40-g-4er-pack/p-1991821000"
+      }
+     ],
+     "pt": "pimenta-do-reino",
+     "qtd": "opcional",
+     "slug": "pimenta-do-reino"
+    },
+    {
+     "de": "Chiliflocken",
+     "foto": null,
+     "id": "Chiliflocken — pimenta calabresa em flocos (opcional)",
+     "obs": "",
+     "produtos": [
+      {
+       "foto": "fotos/pimenta-calabresa-em-flocos-1.jpg",
+       "loja": "REWE",
+       "nome": "ja! Chiliflocken 35g",
+       "url": "https://shop.rewe.de/p/ja-chiliflocken-35g/7895170"
+      },
+      {
+       "foto": "fotos/pimenta-calabresa-em-flocos-2.jpg",
+       "loja": "REWE",
+       "nome": "REWE Beste Wahl Chiliflocken geschrotet 26g",
+       "url": "https://www.rewe.de/shop/p/rewe-beste-wahl-chiliflocken-geschrotet-26g/8333001"
+      },
+      {
+       "foto": "fotos/pimenta-calabresa-em-flocos-3.jpg",
+       "loja": "REWE",
+       "nome": "Fuchs Chili Flocken 50g",
+       "url": "https://shop.rewe.de/p/fuchs-chili-flocken-50g/8990834"
+      }
+     ],
+     "pt": "pimenta calabresa em flocos",
+     "qtd": "opcional",
+     "slug": "pimenta-calabresa-em-flocos"
+    },
+    {
+     "de": "Zimtstangen",
+     "foto": null,
+     "id": "Zimtstangen — canela em pau (opcional)",
+     "obs": "Evite \"Zimt gemahlen\", canela em pó. Sem \"Ceylon\" no nome, geralmente é cássia, mais forte.",
+     "produtos": [
+      {
+       "foto": "fotos/canela-em-pau-1.jpg",
+       "loja": "REWE",
+       "nome": "Edora Zimt-Stangen Ceylon-Zimt 5 Stück",
+       "url": "https://shop.rewe.de/p/edora-zimt-stangen-ceylon-zimt-5-stueck/604479"
+      },
+      {
+       "foto": "fotos/canela-em-pau-2.jpg",
+       "loja": "REWE",
+       "nome": "Fuchs Zimtstangen Ceylon ganz 3 Stück",
+       "url": "https://www.rewe.de/shop/p/fuchs-zimtstangen-ceylon-ganz-3-stueck/8989382"
+      },
+      {
+       "foto": "fotos/canela-em-pau-3.jpg",
+       "loja": "REWE",
+       "nome": "Hartkorn Stangenzimt Ceylon-Canehl 3 Stück",
+       "url": "https://shop.rewe.de/p/hartkorn-stangenzimt-ceylon-canehl-3-stueck/1940773"
+      }
+     ],
+     "pt": "canela em pau",
+     "qtd": "opcional",
+     "slug": "canela-em-pau"
     }
    ],
    "pt": "temperos"
