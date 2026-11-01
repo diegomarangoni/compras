@@ -190,7 +190,7 @@
      "de": "Petersilie (glatt)",
      "foto": "fotos/salsinha.jpg",
      "id": "Petersilie (glatt) — salsinha",
-     "marcado": false,
+     "marcado": true,
      "obs": "Compre a \"glatte\" (lisa), não a \"krause\" (crespa).",
      "opcional": false,
      "produtos": [
@@ -295,7 +295,7 @@
      "de": "Basmatireis / Langkornreis",
      "foto": null,
      "id": "Basmatireis / Langkornreis — arroz",
-     "marcado": true,
+     "marcado": false,
      "obs": "O Oryza (branco, não parboilizado) é o mais parecido com o agulhinha tipo 1. O ja! é parboilizado.",
      "opcional": false,
      "produtos": [
