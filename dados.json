@@ -190,7 +190,7 @@
      "de": "Petersilie (glatt)",
      "foto": "fotos/salsinha.jpg",
      "id": "Petersilie (glatt) — salsinha",
-     "marcado": true,
+     "marcado": false,
      "obs": "Compre a \"glatte\" (lisa), não a \"krause\" (crespa).",
      "opcional": false,
      "produtos": [
@@ -227,7 +227,7 @@
      "de": "Salsiccia / grobe Bratwurst",
      "foto": null,
      "id": "Salsiccia / grobe Bratwurst — linguiça fresca",
-     "marcado": false,
+     "marcado": true,
      "obs": "A \"Salsiccia Classica\" do REWE (crua, 94% porco) é a mais parecida com a linguiça toscana. Também serve \"grobe Bratwurst\" crua. A R&S é vendida solta no balcão de carnes, sem embalagem.",
      "opcional": false,
      "produtos": [
