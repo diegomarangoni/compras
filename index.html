@@ -60,6 +60,7 @@ li.comprado .etiqueta { color: var(--done); background: none; padding: 0; }
 li.comprado .de, li.comprado .pt, li.comprado .qtd { color: var(--done); text-decoration: line-through; }
 .rodape { text-align: center; margin: 28px auto 0; padding: 0 16px; }
 .rodape button { font: inherit; font-size: 15px; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 20px; padding: 8px 16px; }
+.rodape .botoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .rodape button.confirmar { color: #c0392b; border-color: #c0392b; }
 .versao { color: var(--done); font-size: 12px; margin-top: 12px; }
 
@@ -111,7 +112,10 @@ body.travado { position: fixed; left: 0; right: 0; overflow: hidden; }
 </header>
 <main id="lista"></main>
 <div class="rodape">
-  <button id="limpar" type="button">Desmarcar tudo</button>
+  <div class="botoes">
+    <button id="limpar" type="button">Desmarcar tudo</button>
+    <button id="restaurar" type="button">Restaurar</button>
+  </div>
   <div class="versao" id="versao"></div>
 </div>
 
@@ -132,6 +136,7 @@ body.travado { position: fixed; left: 0; right: 0; overflow: hidden; }
 <script>
 "use strict";
 const CHAVE = "compras.marcados";
+const CHAVE_SERVIDOR = "compras.marcados.servidor";
 let dados = null;
 let marcados = new Set();
 
@@ -386,17 +391,35 @@ document.addEventListener("keydown", (e) => { if (e.key === "Escape") { document
   f.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
 })();
 
-const limpar = document.getElementById("limpar");
-let confirmarAte = 0;
-limpar.addEventListener("click", () => {
-  if (Date.now() < confirmarAte) {
-    marcados.clear(); salvarMarcados(); desenhar();
-    confirmarAte = 0; limpar.classList.remove("confirmar"); limpar.textContent = "Desmarcar tudo";
-  } else {
-    confirmarAte = Date.now() + 3000; limpar.classList.add("confirmar"); limpar.textContent = "Toque de novo para desmarcar tudo";
-    setTimeout(() => { if (Date.now() >= confirmarAte) { limpar.classList.remove("confirmar"); limpar.textContent = "Desmarcar tudo"; } }, 3100);
-  }
+// Botão que pede um segundo toque (em até 3 s) antes de agir.
+function comConfirmacao(botao, pedido, acao) {
+  const texto = botao.textContent;
+  let ate = 0;
+  const voltar = () => { ate = 0; botao.classList.remove("confirmar"); botao.textContent = texto; };
+  botao.addEventListener("click", () => {
+    if (Date.now() < ate) { voltar(); acao(); return; }
+    ate = Date.now() + 3000; botao.classList.add("confirmar"); botao.textContent = pedido;
+    setTimeout(() => { if (Date.now() >= ate) voltar(); }, 3100);
+  });
+}
+
+// Desmarca tudo, inclusive o que veio marcado do servidor (e continua assim nas
+// próximas versões, até o .shopping-checked mudar).
+comConfirmacao(document.getElementById("limpar"), "Toque de novo para desmarcar tudo", () => {
+  marcados.clear(); salvarMarcados(); desenhar();
 });
+
+// Esquece as marcações do celular e volta ao estado do .shopping-checked.
+comConfirmacao(document.getElementById("restaurar"), "Toque de novo para restaurar", () => {
+  const doServidor = marcadosDoServidor();
+  marcados = new Set(doServidor); salvarMarcados();
+  try { localStorage.setItem(CHAVE_SERVIDOR, JSON.stringify([...doServidor].sort())); } catch (e) {}
+  desenhar();
+});
+
+function marcadosDoServidor() {
+  return new Set(dados.secoes.flatMap((s) => s.itens.filter((i) => i.marcado).map((i) => i.id)));
+}
 
 async function iniciar() {
   carregarMarcados();
@@ -405,6 +428,14 @@ async function iniciar() {
   // Esquece marcações de itens que não estão mais na lista.
   const ids = new Set(dados.secoes.flatMap((s) => s.itens.map((i) => i.id)));
   marcados = new Set([...marcados].filter((id) => ids.has(id)));
+  // Marcações vindas do .shopping-checked (cook server): só o que mudou desde a
+  // última versão vista entra aqui, para não desfazer o que foi mudado no celular.
+  const doServidor = marcadosDoServidor();
+  let vistos = null;
+  try { vistos = new Set(JSON.parse(localStorage.getItem(CHAVE_SERVIDOR) || "[]")); } catch (e) { vistos = new Set(); }
+  for (const id of doServidor) if (!vistos.has(id)) marcados.add(id);
+  for (const id of vistos) if (!doServidor.has(id)) marcados.delete(id);
+  try { localStorage.setItem(CHAVE_SERVIDOR, JSON.stringify([...doServidor].sort())); } catch (e) {}
   salvarMarcados();
   document.getElementById("receitas").textContent = dados.receitas.join(" · ");
   porSlug.clear();
