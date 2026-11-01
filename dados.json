@@ -52,7 +52,7 @@
       }
      ],
      "pt": "alho",
-     "qtd": "1 dente + 2 dentes",
+     "qtd": "3 dente(s)",
      "slug": "alho"
     },
     {
@@ -82,7 +82,7 @@
       }
      ],
      "pt": "cebola",
-     "qtd": "2 + 1 grande",
+     "qtd": "3",
      "slug": "cebola"
     },
     {
@@ -112,7 +112,7 @@
       }
      ],
      "pt": "tomate",
-     "qtd": "2 grandes",
+     "qtd": "2",
      "slug": "tomate"
     },
     {
@@ -166,7 +166,7 @@
       }
      ],
      "pt": "abobrinha",
-     "qtd": "½ média",
+     "qtd": "½",
      "slug": "abobrinha"
     },
     {
@@ -340,7 +340,7 @@
       }
      ],
      "pt": "tomilho",
-     "qtd": "2 galhos",
+     "qtd": "2 galho(s)",
      "slug": "tomilho"
     }
    ],
