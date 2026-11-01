@@ -142,6 +142,36 @@ function salvarMarcados() {
   try { localStorage.setItem(CHAVE, JSON.stringify([...marcados].sort())); } catch (e) {}
 }
 
+// Posição da lista: salva enquanto rola e ao sair, e volta para ela depois de desenhar
+// a lista (o navegador sozinho não consegue, porque a lista é montada depois de carregar).
+// Guarda junto a "assinatura" da lista (os itens, em ordem): se a lista mudou, começa do topo.
+const CHAVE_SCROLL = "compras.scroll";
+let restaurado = false, salvarScrollTimer = null;
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+function assinatura() {
+  return dados.secoes.map((s) => s.itens.map((i) => i.id).join("|")).join("||");
+}
+function salvarScroll() {
+  if (!restaurado || !dados) return;
+  // Com o painel aberto a página fica travada (scrollY = 0); vale a posição guardada.
+  const y = scrollSalvo !== null ? scrollSalvo : window.scrollY;
+  try { localStorage.setItem(CHAVE_SCROLL, JSON.stringify({ y: Math.round(y), lista: assinatura() })); } catch (e) {}
+}
+function restaurarScroll() {
+  try {
+    const s = JSON.parse(localStorage.getItem(CHAVE_SCROLL) || "null");
+    if (s && s.lista === assinatura() && s.y > 0) window.scrollTo(0, s.y);
+  } catch (e) {}
+  restaurado = true;
+}
+window.addEventListener("scroll", () => {
+  clearTimeout(salvarScrollTimer);
+  salvarScrollTimer = setTimeout(salvarScroll, 150);
+}, { passive: true });
+window.addEventListener("pagehide", salvarScroll);
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") salvarScroll(); });
+
 function el(tag, attrs, ...filhos) {
   const n = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs || {})) {
@@ -379,6 +409,7 @@ async function iniciar() {
   porSlug.clear();
   for (const s of dados.secoes) for (const i of s.itens) porSlug.set(i.slug, i);
   desenhar();
+  restaurarScroll();
   aplicarEndereco();
 }
 
