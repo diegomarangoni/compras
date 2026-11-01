@@ -86,6 +86,16 @@ body.travado { position: fixed; left: 0; right: 0; overflow: hidden; }
 .ampliada { cursor: zoom-out; }
 .aviso { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom) + 24px); transform: translateX(-50%); background: var(--text); color: var(--bg); padding: 8px 14px; border-radius: 18px; font-size: 14px; opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 20; }
 .aviso.visivel { opacity: 1; }
+/* Barra de download de uma versão nova, no topo. */
+.carregando { position: fixed; top: env(safe-area-inset-top); left: 0; right: 0; height: 3px; z-index: 30; pointer-events: none; opacity: 0; transition: opacity .3s; }
+.carregando.ativo { opacity: 1; }
+.carregando > i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s ease-out; }
+/* Faixa "Sem conexão", no topo; empurra o cabeçalho para baixo. */
+.sem-conexao { position: fixed; top: 0; left: 0; right: 0; z-index: 25; background: #8a877f; color: #fff; font-size: 14px; font-weight: 600; text-align: center;
+  padding: calc(env(safe-area-inset-top) + 6px) 16px 6px; transform: translateY(-100%); transition: transform .25s; }
+.sem-conexao.visivel { transform: none; }
+body.offline header { padding-top: 52px; }
+@media (prefers-color-scheme: dark) { .sem-conexao { background: #4a4843; } }
 .fechar { position: absolute; right: 12px; top: 18px; width: 32px; height: 32px; border-radius: 50%; border: 0; background: var(--line); color: var(--text); font-size: 18px; line-height: 32px; padding: 0; }
 .painel .corpo { overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; flex: 1 1 auto; min-height: 0; padding: 12px 16px 20px; }
 .painel .topo { touch-action: none; }
@@ -132,6 +142,8 @@ body.travado { position: fixed; left: 0; right: 0; overflow: hidden; }
 </div>
 <div class="ampliada" id="ampliada"><img alt=""></div>
 <div class="aviso" id="aviso" role="status"></div>
+<div class="carregando" id="carregando" aria-hidden="true"><i></i></div>
+<div class="sem-conexao" id="sem-conexao" role="status">Sem conexão · usando a lista salva</div>
 
 <script>
 "use strict";
@@ -447,14 +459,32 @@ async function iniciar() {
 
 // ---- Atualização e cache offline ----
 // A cada abertura (e quando o app volta para a frente), lê versao.json direto do
-// servidor. Se a versão mudou, baixa TODOS os arquivos para um cache novo, ignorando
-// o cache HTTP, e só troca de versão quando tudo foi baixado. O sw.js serve o cache
-// da versão em uso; "?rede=" faz o pedido passar direto para a rede.
+// servidor. Se a versão mudou, monta um cache novo: o que tem o mesmo hash da versão
+// em uso é copiado do cache atual, e só o que mudou (ou falta) é baixado, ignorando o
+// cache HTTP. Só troca de versão quando o cache novo está completo. O sw.js serve o
+// cache da versão em uso; "?rede=" faz o pedido passar direto para a rede.
 const META = "compras-meta";
 const CHAVE_VERSAO = "versao-em-uso";
+const CHAVE_HASHES = "__hashes.json";  // dentro do cache de cada versão
 let atualizando = false;
 
-function rodape(texto) { document.getElementById("versao").textContent = texto; }
+function rodape(versao) { document.getElementById("versao").textContent = versao ? "versão " + versao : ""; }
+
+function semConexao(sim) {
+  document.getElementById("sem-conexao").classList.toggle("visivel", sim);
+  document.body.classList.toggle("offline", sim);
+}
+
+const carregando = document.getElementById("carregando");
+function progresso(feitos, total) {
+  carregando.classList.add("ativo");
+  // Começa com um pouco para a barra aparecer logo no primeiro arquivo.
+  carregando.firstElementChild.style.width = (5 + 95 * feitos / total) + "%";
+}
+function fimProgresso() {
+  carregando.classList.remove("ativo");
+  setTimeout(() => { carregando.firstElementChild.style.width = "0"; }, 300);
+}
 
 async function versaoEmUso() {
   try {
@@ -467,30 +497,54 @@ async function atualizar() {
   if (atualizando || !("caches" in window)) return;
   atualizando = true;
   const atual = await versaoEmUso();
+  rodape(atual);
   try {
-    const r = await fetch("versao.json?rede=" + Date.now(), { cache: "no-store" });
+    let r;
+    try { r = await fetch("versao.json?rede=" + Date.now(), { cache: "no-store" }); } catch (e) { semConexao(true); return; }
     if (!r.ok) throw new Error("versao.json " + r.status);
-    const { versao, arquivos } = await r.json();
-    if (versao === atual) { rodape("versão " + atual); return; }
+    semConexao(false);
+    const { versao, arquivos, hashes } = await r.json();
+    if (versao === atual) return;
+
+    const anterior = atual ? await caches.open("compras-" + atual) : null;
+    let hashesAnteriores = {};
+    try { const m = anterior && await anterior.match(CHAVE_HASHES); if (m) hashesAnteriores = await m.json(); } catch (e) {}
     const nome = "compras-" + versao;
     await caches.delete(nome);
     const c = await caches.open(nome);
-    let n = 0;
+    const baixar = [];
     for (const a of arquivos) {
-      rodape(`baixando lista nova… ${++n}/${arquivos.length}`);
-      const resp = await fetch(a + "?rede=" + versao, { cache: "reload" });
-      if (!resp.ok) throw new Error(a + " " + resp.status);
-      await c.put(a, resp);
+      const igual = hashes && hashes[a] && hashes[a] === hashesAnteriores[a];
+      const salvo = igual ? await anterior.match(a) : null;
+      if (salvo) await c.put(a, salvo); else baixar.push(a);
     }
+    for (let n = 0; n < baixar.length; n++) {
+      progresso(n, baixar.length);
+      let resp;
+      try { resp = await fetch(baixar[n] + "?rede=" + versao, { cache: "reload" }); } catch (e) { semConexao(true); fimProgresso(); return; }
+      if (!resp.ok) throw new Error(baixar[n] + " " + resp.status);
+      await c.put(baixar[n], resp);
+    }
+    if (baixar.length) progresso(1, 1);
+    if (hashes) await c.put(CHAVE_HASHES, new Response(JSON.stringify(hashes)));
     await (await caches.open(META)).put(CHAVE_VERSAO, new Response(versao));
     for (const k of await caches.keys()) if (k.startsWith("compras-") && k !== nome && k !== META) await caches.delete(k);
-    if (atual) location.reload(); else rodape("versão " + versao);
+    if (atual) {
+      // Deixa a barra chegar ao fim antes de recarregar.
+      setTimeout(() => location.reload(), baixar.length ? 250 : 0);
+    } else {
+      fimProgresso(); rodape(versao);
+    }
   } catch (e) {
-    rodape(atual ? `versão ${atual} · sem conexão, usando a lista salva` : "sem conexão");
+    fimProgresso();
   } finally {
     atualizando = false;
   }
 }
+
+window.addEventListener("offline", () => semConexao(true));
+window.addEventListener("online", atualizar);
+if (navigator.onLine === false) semConexao(true);
 
 iniciar().then(() => {
   if ("serviceWorker" in navigator) {

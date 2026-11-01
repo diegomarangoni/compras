@@ -2,8 +2,9 @@
 //
 // O service worker só serve arquivos do cache da versão em uso. Quem baixa versões
 // novas é a própria página (index.html, função atualizar): ela lê versao.json sem
-// cache, baixa tudo para um cache novo "compras-<versão>" e, com tudo baixado, grava
-// a versão em uso em "compras-meta". Assim nunca fica uma versão pela metade.
+// cache e monta um cache novo "compras-<versão>" (copia do cache atual o que tem o
+// mesmo hash e baixa o resto); com tudo pronto, grava a versão em uso em
+// "compras-meta". Assim nunca fica uma versão pela metade.
 const META = "compras-meta";
 const CHAVE_VERSAO = "versao-em-uso";
 
