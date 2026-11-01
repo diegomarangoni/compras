@@ -92,7 +92,7 @@
      "de": "Tomaten",
      "foto": "fotos/tomate.jpg",
      "id": "Tomaten — tomate",
-     "marcado": false,
+     "marcado": true,
      "obs": "",
      "opcional": false,
      "produtos": [
@@ -179,7 +179,7 @@
      "de": "Champignons",
      "foto": "fotos/champignon.jpg",
      "id": "Champignons — champignon",
-     "marcado": false,
+     "marcado": true,
      "obs": "Compre fresco; \"Pilze\" em lata ou vidro são em conserva.",
      "opcional": false,
      "produtos": [
@@ -210,7 +210,7 @@
      "de": "Portobello Pilze / Riesenchampignons",
      "foto": "fotos/cogumelo-portobello.jpg",
      "id": "Portobello Pilze / Riesenchampignons — cogumelo portobello",
-     "marcado": false,
+     "marcado": true,
      "obs": "O portobello é o champignon marrom grande. \"Riesenchampignons\" também servem, mesmo se forem brancos.",
      "opcional": false,
      "produtos": [
@@ -272,7 +272,7 @@
      "de": "Petersilie (glatt)",
      "foto": "fotos/salsinha.jpg",
      "id": "Petersilie (glatt) — salsinha",
-     "marcado": false,
+     "marcado": true,
      "obs": "Compre a \"glatte\" (lisa), não a \"krause\" (crespa).",
      "opcional": false,
      "produtos": [
@@ -303,7 +303,7 @@
      "de": "Basilikum",
      "foto": "fotos/manjericao.jpg",
      "id": "Basilikum — manjericão",
-     "marcado": false,
+     "marcado": true,
      "obs": "Fresco, em vaso, na seção de ervas.",
      "opcional": false,
      "produtos": [
@@ -334,7 +334,7 @@
      "de": "Thymian",
      "foto": "fotos/tomilho.jpg",
      "id": "Thymian — tomilho",
-     "marcado": false,
+     "marcado": true,
      "obs": "Fresco, em vaso ou maço, na seção de ervas.",
      "opcional": false,
      "produtos": [
@@ -402,7 +402,7 @@
      "de": "Griechischer Joghurt 10% / Labneh",
      "foto": null,
      "id": "Griechischer Joghurt 10% / Labneh — coalhada fresca",
-     "marcado": false,
+     "marcado": true,
      "obs": "Não há Labneh no REWE nem no Netto. O iogurte grego 10% escorrido uma noite num pano vira uma coalhada mais firme. Mercados turcos e árabes costumam ter Labneh.",
      "opcional": false,
      "produtos": [
@@ -495,7 +495,7 @@
      "de": "Basmatireis / Langkornreis",
      "foto": null,
      "id": "Basmatireis / Langkornreis — arroz",
-     "marcado": false,
+     "marcado": true,
      "obs": "O Oryza (branco, não parboilizado) é o mais parecido com o agulhinha tipo 1. O ja! é parboilizado.",
      "opcional": false,
      "produtos": [
@@ -526,7 +526,7 @@
      "de": "Maisgrieß / Polenta",
      "foto": null,
      "id": "Maisgrieß / Polenta — fubá",
-     "marcado": false,
+     "marcado": true,
      "obs": "Fubá é \"Maisgrieß\" ou \"Polenta\". Evite \"Minuten-Polenta\" e \"2-Minuten-Polenta\", que são pré-cozidas.",
      "opcional": false,
      "produtos": [
@@ -613,7 +613,7 @@
      "de": "Tomatenmark",
      "foto": null,
      "id": "Tomatenmark — extrato de tomate",
-     "marcado": false,
+     "marcado": true,
      "obs": "O concentrado 2x (ja!) é o mais parecido com o extrato brasileiro. O 3x é mais forte: use um pouco menos.",
      "opcional": false,
      "produtos": [
@@ -650,7 +650,7 @@
      "de": "Olivenöl",
      "foto": null,
      "id": "Olivenöl — azeite de oliva",
-     "marcado": false,
+     "marcado": true,
      "obs": "O ja! é o mais barato. O Lakudia (grego) é uma boa opção de marca.",
      "opcional": false,
      "produtos": [
@@ -681,7 +681,7 @@
      "de": "Sonnenblumenöl / Rapsöl",
      "foto": null,
      "id": "Sonnenblumenöl / Rapsöl — óleo",
-     "marcado": false,
+     "marcado": true,
      "obs": "",
      "opcional": false,
      "produtos": [
@@ -718,7 +718,7 @@
      "de": "Lorbeerblätter",
      "foto": null,
      "id": "Lorbeerblätter — folhas de louro",
-     "marcado": false,
+     "marcado": true,
      "obs": "Folhas secas inteiras, iguais às do Brasil.",
      "opcional": false,
      "produtos": [
@@ -749,7 +749,7 @@
      "de": "Annatto / Achiote",
      "foto": null,
      "id": "Annatto / Achiote — urucum",
-     "marcado": false,
+     "marcado": true,
      "obs": "Não existe no REWE nem no Netto. Substituto: \"Paprika edelsüß\" do REWE. O urucum de verdade só aparece em sementes no marketplace online do Kaufland ou em mercados asiáticos e latinos.",
      "opcional": false,
      "produtos": [
@@ -774,7 +774,7 @@
      "de": "Salz / Jodsalz",
      "foto": null,
      "id": "Salz / Jodsalz — sal",
-     "marcado": false,
+     "marcado": true,
      "obs": "A foto é do \"Marken-Jodsalz\" da Bad Reichenhaller; o produto listado é a versão \"mit Fluorid + Folsäure\", com embalagem parecida.",
      "opcional": false,
      "produtos": [
@@ -799,7 +799,7 @@
      "de": "Pfeffer schwarz (gemahlen)",
      "foto": null,
      "id": "Pfeffer schwarz (gemahlen) — pimenta-do-reino",
-     "marcado": false,
+     "marcado": true,
      "obs": "A foto da Ostmann é do saquinho; o produto listado no Netto é o pote com tampa dosadora (\"Streuer\").",
      "opcional": false,
      "produtos": [
@@ -824,7 +824,7 @@
      "de": "Paprika geräuchert",
      "foto": null,
      "id": "Paprika geräuchert — páprica defumada",
-     "marcado": false,
+     "marcado": true,
      "obs": "Evite o \"Alarmstufe Rauch\" da Ostmann: é uma mistura com muito sal.",
      "opcional": false,
      "produtos": [
@@ -855,7 +855,7 @@
      "de": "Chiliflocken",
      "foto": null,
      "id": "Chiliflocken — pimenta calabresa em flocos",
-     "marcado": false,
+     "marcado": true,
      "obs": "",
      "opcional": false,
      "produtos": [
@@ -886,7 +886,7 @@
      "de": "Kreuzkümmel (gemahlen)",
      "foto": null,
      "id": "Kreuzkümmel (gemahlen) — cominho em pó",
-     "marcado": false,
+     "marcado": true,
      "obs": "Cominho é \"Kreuzkümmel\", não \"Kümmel\" (que é alcaravia). O Edora fica no corredor de produtos turcos e rende mais pelo preço.",
      "opcional": false,
      "produtos": [
@@ -923,7 +923,7 @@
      "de": "Pfeffer schwarz (gemahlen)",
      "foto": null,
      "id": "Pfeffer schwarz (gemahlen) — pimenta-do-reino (opcional)",
-     "marcado": false,
+     "marcado": true,
      "obs": "A foto da Ostmann é do saquinho; o produto listado no Netto é o pote com tampa dosadora (\"Streuer\").",
      "opcional": true,
      "produtos": [
@@ -948,7 +948,7 @@
      "de": "Chiliflocken",
      "foto": null,
      "id": "Chiliflocken — pimenta calabresa em flocos (opcional)",
-     "marcado": false,
+     "marcado": true,
      "obs": "",
      "opcional": true,
      "produtos": [
