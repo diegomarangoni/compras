@@ -153,7 +153,7 @@
      "de": "Limetten",
      "foto": "fotos/limao.jpg",
      "id": "Limetten — limão (opcional)",
-     "marcado": true,
+     "marcado": false,
      "obs": "O limão taiti é a \"Limette\" (verde); a \"Zitrone\" é o limão-siciliano (amarelo).",
      "opcional": true,
      "produtos": [
@@ -295,7 +295,7 @@
      "de": "Basmatireis / Langkornreis",
      "foto": null,
      "id": "Basmatireis / Langkornreis — arroz",
-     "marcado": false,
+     "marcado": true,
      "obs": "O Oryza (branco, não parboilizado) é o mais parecido com o agulhinha tipo 1. O ja! é parboilizado.",
      "opcional": false,
      "produtos": [

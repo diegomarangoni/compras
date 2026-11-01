@@ -54,7 +54,7 @@
  ],
  "hashes": {
   "./": "6c24342f42ffa2ba",
-  "dados.json": "6e45e40b7a86b746",
+  "dados.json": "53688156f312180f",
   "fotos/alho.jpg": "be80a45ef4236394",
   "fotos/arroz-1.jpg": "5ccef558872700f8",
   "fotos/arroz-2.jpg": "6bb7e8e843103d4f",
@@ -105,5 +105,5 @@
   "icone-512.png": "11ab95ffdd5f355b",
   "manifest.webmanifest": "444c40265754c3be"
  },
- "versao": "3617f88e2405"
+ "versao": "4c24f930e974"
 }
