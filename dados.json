@@ -215,7 +215,7 @@
      "de": "Butter",
      "foto": null,
      "id": "Butter — manteiga",
-     "marcado": false,
+     "marcado": true,
      "obs": "Prefira \"Süßrahmbutter\", a mais neutra; \"Mildgesäuerte Butter\" é levemente ácida. Evite \"Kräuterbutter\", que é manteiga de ervas. A Sachsenmilch hoje vem na embalagem \"Unsere Butter streich fein\", como na foto.",
      "opcional": false,
      "produtos": [
@@ -283,7 +283,7 @@
      "de": "Maisgrieß / Polenta",
      "foto": null,
      "id": "Maisgrieß / Polenta — fubá",
-     "marcado": false,
+     "marcado": true,
      "obs": "Fubá é \"Maisgrieß\" ou \"Polenta\". Evite \"Minuten-Polenta\" e \"2-Minuten-Polenta\", que são pré-cozidas.",
      "opcional": false,
      "produtos": [
@@ -413,7 +413,7 @@
      "de": "Salz / Jodsalz",
      "foto": null,
      "id": "Salz / Jodsalz — sal",
-     "marcado": false,
+     "marcado": true,
      "obs": "A foto é do \"Marken-Jodsalz\" da Bad Reichenhaller; o produto listado é a versão \"mit Fluorid + Folsäure\", com embalagem parecida.",
      "opcional": false,
      "produtos": [
@@ -494,7 +494,7 @@
      "de": "Zimtstangen",
      "foto": null,
      "id": "Zimtstangen — canela em pau (opcional)",
-     "marcado": false,
+     "marcado": true,
      "obs": "Evite \"Zimt gemahlen\", canela em pó. Sem \"Ceylon\" no nome, geralmente é cássia, mais forte.",
      "opcional": true,
      "produtos": [

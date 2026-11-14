@@ -41,7 +41,7 @@
  ],
  "hashes": {
   "./": "6c24342f42ffa2ba",
-  "dados.json": "98419fdd72827221",
+  "dados.json": "d07a6326a053fc0a",
   "fotos/abobrinha.jpg": "ab3ad9e87c20690a",
   "fotos/alho.jpg": "be80a45ef4236394",
   "fotos/azeite-de-oliva-1.jpg": "a48cbf976cb8fc75",
@@ -79,5 +79,5 @@
   "icone-512.png": "11ab95ffdd5f355b",
   "manifest.webmanifest": "444c40265754c3be"
  },
- "versao": "c766849b0d7b"
+ "versao": "2b51bc378a05"
 }
